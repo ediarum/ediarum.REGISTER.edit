@@ -35,8 +35,8 @@
     <xsl:template match="tei:body/tei:listBibl">
         <xsl:copy>
             <xsl:apply-templates select="tei:bibl">
-                <xsl:sort select="tei:author/tei:persName[@type = 'reg']/normalize-space()" lang="de"/>
-                <xsl:sort select="tei:author/tei:title" lang="de"/>
+                <xsl:sort select="tei:author[1]/tei:persName/(tei:surname|tei:name)/normalize-space()" lang="de"/>
+                <xsl:sort select="tei:title" lang="de"/>
             </xsl:apply-templates>
         </xsl:copy>
     </xsl:template>
