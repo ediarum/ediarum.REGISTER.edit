@@ -17,13 +17,14 @@
 								<Integer>4</Integer>
 							</field>
 							<field name="uri">
-								<String>http://admin:********@telotadev.bbaw.de:9200/exist/rest/db/apps/ediarum/schemata/ah_briefe_schema_register.rng</String>
+								<String>${framework}/schema/ediarum_register.rng</String>
 							</field>
 						</docTypeSchema>
 					</field>
 					<field name="classpath">
 						<String-array>
 							<String>${framework}/ediarum.jar</String>
+							<String>${framework}/ediarum2018.jar</String>
 						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
@@ -35,7 +36,7 @@
 								<cssFile-array>
 									<cssFile>
 										<field name="href">
-											<String>${framework}/css/register_standard.css</String>
+											<String>${framework}/css/standard.css</String>
 										</field>
 										<field name="title">
 											<String>Standard</String>
@@ -1686,7 +1687,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/register_merge.xsl"/>
+    &lt;xsl:import href="resources/merge.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -2655,7 +2656,7 @@
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/sortRegister.xsl"/>
+    &lt;xsl:import href="resources/sort.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
@@ -5281,7 +5282,7 @@ general_ptr_2</String>
 														<Integer>4</Integer>
 													</field>
 													<field name="uri">
-														<String>${framework}/schemata/ediarum_register.rng</String>
+														<String>${framework}/schema/ediarum_register.rng</String>
 													</field>
 												</validationUnitSchema>
 											</field>
