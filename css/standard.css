@@ -163,7 +163,7 @@ note placeName[key]:after {
     link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_place}') "?id=" attr(key);
 }
 
-desc bibl[sameAs]:after
+desc bibl[sameAs]:after,
 note bibl[sameAs]:after {
     link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_bibl}') "?id=" attr(sameAs);
 }
