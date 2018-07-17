@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="20.0" xml:space="preserve">
+<serialized version="17.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -2483,7 +2483,7 @@
 															</entry>
 															<entry>
 																<String>item variable</String>
-																<String>&lt;idno type="uri" xmlns="http://www.tei-c.org/ns/1.0">$XPATH{/span}&lt;/idno></String>
+																<String>&lt;idno type="uri" xmlns="http://www.tei-c.org/ns/1.0">$XPATH{@id}&lt;/idno></String>
 															</entry>
 															<entry>
 																<String>multiple selection</String>
@@ -4777,9 +4777,6 @@ general_ptr_2</String>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array/>
 									</field>
-									<field name="context">
-										<null/>
-									</field>
 								</menu>
 							</field>
 							<field name="popupMenuDescriptor">
@@ -4898,14 +4895,8 @@ general_ptr_2</String>
 														</menuItem>
 													</menuEntry-array>
 												</field>
-												<field name="context">
-													<null/>
-												</field>
 											</menu>
 										</menuEntry-array>
-									</field>
-									<field name="context">
-										<null/>
 									</field>
 								</menu>
 							</field>
@@ -5285,28 +5276,16 @@ general_ptr_2</String>
 							<field name="tableSupportClassName">
 								<null/>
 							</field>
-							<field name="tableCellSeparatorSupportClassName">
-								<null/>
-							</field>
 							<field name="tableColWidthSupportClassName">
 								<null/>
 							</field>
 							<field name="customReferencesResolver">
 								<null/>
 							</field>
-							<field name="editPropertiesHandler">
-								<null/>
-							</field>
 							<field name="authorExtensionStateListener">
 								<null/>
 							</field>
 							<field name="attributesRecognizer">
-								<null/>
-							</field>
-							<field name="authorActionEventHandler">
-								<null/>
-							</field>
-							<field name="authorImageDecorator">
 								<null/>
 							</field>
 						</authorExtension>
@@ -5461,9 +5440,6 @@ general_ptr_2</String>
 						<null/>
 					</field>
 					<field name="customAttributeValueEditor">
-						<null/>
-					</field>
-					<field name="textModeExternalObjectInsertionHandler">
 						<null/>
 					</field>
 				</documentTypeDescriptor>
