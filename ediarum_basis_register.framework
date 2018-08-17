@@ -24,7 +24,6 @@
 					<field name="classpath">
 						<String-array>
 							<String>${framework}/ediarum.jar</String>
-							<String>${framework}/ediarum2018.jar</String>
 						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
@@ -4761,6 +4760,60 @@ general_ptr_2</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>item_label[alt]</String>
+										</field>
+										<field name="name">
+											<String>Alternative Bezeichung</String>
+										</field>
+										<field name="description">
+											<String>Alternative Bezeichnung für den Begriff notieren</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::item</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;label xmlns="http://www.tei-c.org/ns/1.0" type="alt">&lt;/label></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::item[1]/label[@type='reg']</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -5190,6 +5243,12 @@ general_ptr_2</String>
 												</field>
 												<field name="toolbarEntriesDescriptorList">
 													<toolbarEntry-array>
+														<toolbarItem>
+															<field name="actionID">
+																<String>item_label[alt]</String>
+															</field>
+														</toolbarItem>
+														<toolbarSeparator/>
 														<toolbarItem>
 															<field name="actionID">
 																<String>item_list</String>
