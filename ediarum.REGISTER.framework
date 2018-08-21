@@ -9,7 +9,7 @@
 						<null/>
 					</field>
 					<field name="name">
-						<String>ediarum.BASIS.register</String>
+						<String>ediarum.REGISTER.edit</String>
 					</field>
 					<field name="schemaDescriptor">
 						<docTypeSchema>
@@ -17,7 +17,7 @@
 								<Integer>4</Integer>
 							</field>
 							<field name="uri">
-								<String>${framework}/schema/ediarum_register.rng</String>
+								<String>${framework}/schema/ediarum.REGISTER.rng</String>
 							</field>
 						</docTypeSchema>
 					</field>
@@ -5356,7 +5356,7 @@ general_ptr_2</String>
 						<String-array/>
 					</field>
 					<field name="description">
-						<String>Oxygen XML Framework für Register in ediarum.BASIS</String>
+						<String>Oxygen XML Framework für Register, die in ediarum erstellt und gepflegt werden. Kompatibel zu ediarum.BASE.edit</String>
 					</field>
 					<field name="doctypeRules">
 						<documentTypeRule-array>
@@ -5435,7 +5435,7 @@ general_ptr_2</String>
 														<Integer>4</Integer>
 													</field>
 													<field name="uri">
-														<String>${framework}/schema/ediarum_register.rng</String>
+														<String>${framework}/schema/ediarum.REGISTER.rng</String>
 													</field>
 												</validationUnitSchema>
 											</field>
@@ -5446,14 +5446,14 @@ general_ptr_2</String>
 									<String>Validation_scenario</String>
 								</field>
 								<field name="name">
-									<String>ediarum.BASIS.register</String>
+									<String>ediarum.REGISTER</String>
 								</field>
 							</validationScenario>
 						</validationScenario-array>
 					</field>
 					<field name="defaultValidationScenarios">
 						<list>
-							<String>ediarum.BASIS.register</String>
+							<String>ediarum.REGISTER</String>
 						</list>
 					</field>
 					<field name="defaultTransformationScenarios">
