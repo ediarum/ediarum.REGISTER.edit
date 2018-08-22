@@ -1,0 +1,22 @@
+------------------------------------------------------------------------------------------------
+ediarum.REGISTER.edit 
+Digitale Arbeitsumgebung für Editionsvorhaben
+
+Framework (Dokumenttyp-Zuordnung) für Oxygen XML 
+
+Entwicklung: 
+Stefan Dumont, dumont@bbaw.de
+
+© 2011-2018 
+Berlin-Brandenburgische Akademie der Wissenschaften 
+TELOTA - The electronic Life of the Academy
+
+
+CHANGELOG
+------------------------------------------------------------------------------------------------
+
+1.0.0 vom 22.08.2018
+
+* Inital release as standalone add-on for ediarum
+
+    
