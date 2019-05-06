@@ -3736,12 +3736,12 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
-																<String>${ediarum_website_base}/${ediarum_project_name}${ediarum_website_bibl}?id=${xpath_eval(ancestor-or-self::bibl[1]/@xml:id/data(.))}</String>
+																<String>${ediarum_website_base}${ediarum_website_path}${ediarum_website_bibl}?id=${xpath_eval(ancestor-or-self::bibl[1]/@xml:id/data(.))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.OpenURLOperation</String>
+														<String>org.bbaw.telota.ediarum.OpenFileOperation</String>
 													</field>
 												</actionMode>
 												<actionMode>
@@ -3752,12 +3752,12 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
-																<String>${ediarum_website_base}/${ediarum_project_name}${ediarum_website_place}?id=${xpath_eval(ancestor-or-self::place[1]/@xml:id/data(.))}</String>
+																<String>${ediarum_website_base}${ediarum_website_path}${ediarum_website_place}?id=${xpath_eval(ancestor-or-self::place[1]/@xml:id/data(.))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.OpenURLOperation</String>
+														<String>org.bbaw.telota.ediarum.OpenFileOperation</String>
 													</field>
 												</actionMode>
 												<actionMode>
@@ -3768,12 +3768,12 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
-																<String>${ediarum_website_base}/${ediarum_project_name}${ediarum_website_person}?id=${xpath_eval(ancestor-or-self::person[1]/@xml:id/data(.))}</String>
+																<String>${ediarum_website_base}${ediarum_website_path}${ediarum_website_person}?id=${xpath_eval(ancestor-or-self::person[1]/@xml:id/data(.))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.OpenURLOperation</String>
+														<String>org.bbaw.telota.ediarum.OpenFileOperation</String>
 													</field>
 												</actionMode>
 												<actionMode>
@@ -3784,12 +3784,12 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
-																<String>${ediarum_website_base}/${ediarum_project_name}${ediarum_website_item}?id=${xpath_eval(ancestor-or-self::item[1]/@xml:id/data(.))}</String>
+																<String>${ediarum_website_base}${ediarum_website_path}${ediarum_website_item}?id=${xpath_eval(ancestor-or-self::item[1]/@xml:id/data(.))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.OpenURLOperation</String>
+														<String>org.bbaw.telota.ediarum.OpenFileOperation</String>
 													</field>
 												</actionMode>
 												<actionMode>
@@ -3800,12 +3800,12 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>URL</String>
-																<String>${ediarum_website_base}/${ediarum_project_name}${hirt_website_artwork}?id=${xpath_eval(ancestor-or-self::artwork[1]/@xml:id/data(.))}</String>
+																<String>${ediarum_website_base}${ediarum_website_path}${hirt_website_artwork}?id=${xpath_eval(ancestor-or-self::artwork[1]/@xml:id/data(.))}</String>
 															</entry>
 														</serializableOrderedMap>
 													</field>
 													<field name="operationID">
-														<String>org.bbaw.telota.ediarum.OpenURLOperation</String>
+														<String>org.bbaw.telota.ediarum.OpenFileOperation</String>
 													</field>
 												</actionMode>
 											</actionMode-array>
