@@ -15,7 +15,7 @@ TELOTA - The electronic Life of the Academy
 CHANGELOG
 ------------------------------------------------------------------------------------------------
 
-1.1.2 vom 06.05.2019
+1.0.1 vom 06.05.2019
 
 * BUGFIX 11815: Link zur Webansicht fehlerhaft
 
