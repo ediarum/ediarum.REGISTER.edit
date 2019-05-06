@@ -15,6 +15,10 @@ TELOTA - The electronic Life of the Academy
 CHANGELOG
 ------------------------------------------------------------------------------------------------
 
+1.1.2 vom 06.05.2019
+
+* BUGFIX 11815: Link zur Webansicht fehlerhaft
+
 1.0.0 vom 22.08.2018
 
 * Inital release as standalone add-on for ediarum
