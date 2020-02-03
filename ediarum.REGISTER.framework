@@ -1249,7 +1249,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::place[not(parent::place)]</String>
+														<String>ancestor-or-self::place[not(parent::place) and not(listPlace) and idno]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -1263,7 +1263,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::place</String>
+																<String>ancestor-or-self::place[not(parent::place)]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1275,6 +1275,38 @@
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
+	<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::place[listPlace]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
+  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';))}">
+          &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
+  &lt;/place>
+&lt;/listPlace></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::place[not(parent::place)]/listPlace</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+
+
+
+												
 											</actionMode-array>
 										</field>
 										<field name="enabledInReadOnlyContext">
