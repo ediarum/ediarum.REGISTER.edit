@@ -1283,11 +1283,10 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
+																<String>
   &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';))}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
-  &lt;/place>
-&lt;/listPlace></String>
+  &lt;/place></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
