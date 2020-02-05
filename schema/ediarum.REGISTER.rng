@@ -408,6 +408,11 @@
                     <choice>
                         <value>street</value>
                         <value>building</value>
+                        <value>sea</value>
+                        <value>mountain</value>
+                        <value>forrest</value>
+                        <value>parks</value>
+                        <value>others</value>
                     </choice>
                 </attribute>
             </optional>
