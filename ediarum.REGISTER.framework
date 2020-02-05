@@ -1249,14 +1249,14 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::place[not(parent::place) and not(listPlace) and idno]</String>
+														<String>ancestor-or-self::place[not(parent::place) and not(listPlace)]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';))}">
+  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';'others':'Sonstiges';))}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place>
 &lt;/listPlace></String>
@@ -1284,7 +1284,7 @@
 															<entry>
 																<String>fragment</String>
 																<String>
-  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';))}">
+  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';'others':'Sonstiges';))}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place></String>
 															</entry>
