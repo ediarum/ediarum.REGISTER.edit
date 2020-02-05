@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="17.1" xml:space="preserve">
+<serialized version="21.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -1249,48 +1249,51 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::place[not(parent::place) and not(listPlace)]</String>
-													</field>
-													<field name="argValues">
-														<serializableOrderedMap>
-															<entry>
-																<String>fragment</String>
-																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';'others':'Sonstiges';))}">
-          &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
-  &lt;/place>
-&lt;/listPlace></String>
-															</entry>
-															<entry>
-																<String>insertLocation</String>
-																<String>ancestor-or-self::place[not(parent::place)]</String>
-															</entry>
-															<entry>
-																<String>insertPosition</String>
-																<String>Inside as last child</String>
-															</entry>
-														</serializableOrderedMap>
-													</field>
-													<field name="operationID">
-														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
-													</field>
-												</actionMode>
-	<actionMode>
-													<field name="xpathCondition">
-														<String>ancestor-or-self::place[listPlace]</String>
+														<String>ancestor-or-self::place[@type] and ancestor-or-self::place[listPlace]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>
-  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';'others':'Sonstiges';))}">
+  &lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('', radio, ('building':'Gebäude';'  street':'Straße'; 'sea':'Fluss, See';  'mountain':'Berg, Hügel, Felsen';  'forrest':'Wald';   'park':'Parks';   'other':'Nicht spezifiziert'; ))}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
-  &lt;/place></String>
+  &lt;/place>
+
+
+</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::place[not(parent::place)]/listPlace</String>
+																<String>ancestor-or-self::place[@type]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::place[not(parent::place) and not(listPlace)]  </String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
+  &lt;place xml:id="ediarum_${id}" type="${ask('', radio,  ('building':'Gebäude';'  street':'Straße'; 'sea':'Fluss, See';  'mountain':'Berg, Hügel, Felsen';  'forrest':'Wald';   'park':'Parks';   'other':'Nicht spezifiziert'; ))}">
+          &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
+  &lt;/place>
+&lt;/listPlace></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::place[not(@type)]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1302,10 +1305,6 @@
 														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
 													</field>
 												</actionMode>
-
-
-
-												
 											</actionMode-array>
 										</field>
 										<field name="enabledInReadOnlyContext">
@@ -4428,7 +4427,7 @@ org_location[to]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
-																<String>Inside as last child</String>
+																<String>After</String>
 															</entry>
 															<entry>
 																<String>schemaAware</String>
@@ -4460,7 +4459,7 @@ org_location[to]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
-																<String>Inside as last child</String>
+																<String>After</String>
 															</entry>
 															<entry>
 																<String>schemaAware</String>
@@ -4861,6 +4860,9 @@ general_ptr_2</String>
 									<field name="menuEntriesDescriptorList">
 										<menuEntry-array/>
 									</field>
+									<field name="context">
+										<null/>
+									</field>
 								</menu>
 							</field>
 							<field name="popupMenuDescriptor">
@@ -4979,8 +4981,14 @@ general_ptr_2</String>
 														</menuItem>
 													</menuEntry-array>
 												</field>
+												<field name="context">
+													<null/>
+												</field>
 											</menu>
 										</menuEntry-array>
+									</field>
+									<field name="context">
+										<null/>
 									</field>
 								</menu>
 							</field>
@@ -5366,16 +5374,28 @@ general_ptr_2</String>
 							<field name="tableSupportClassName">
 								<null/>
 							</field>
+							<field name="tableCellSeparatorSupportClassName">
+								<null/>
+							</field>
 							<field name="tableColWidthSupportClassName">
 								<null/>
 							</field>
 							<field name="customReferencesResolver">
 								<null/>
 							</field>
+							<field name="editPropertiesHandler">
+								<null/>
+							</field>
 							<field name="authorExtensionStateListener">
 								<null/>
 							</field>
 							<field name="attributesRecognizer">
+								<null/>
+							</field>
+							<field name="authorActionEventHandler">
+								<null/>
+							</field>
+							<field name="authorImageDecorator">
 								<null/>
 							</field>
 						</authorExtension>
@@ -5530,6 +5550,9 @@ general_ptr_2</String>
 						<null/>
 					</field>
 					<field name="customAttributeValueEditor">
+						<null/>
+					</field>
+					<field name="textModeExternalObjectInsertionHandler">
 						<null/>
 					</field>
 				</documentTypeDescriptor>
