@@ -728,7 +728,7 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::place[not(note)]</String>
+														<String>ancestor-or-self::place[not(note)] and ancestor-or-self::place[@type]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -738,7 +738,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::place/placeName[position()=last()]</String>
+																<String>ancestor-or-self::place[@type]/placeName[position()=last()]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -752,7 +752,7 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::place[not(note)] and ancestor-or-self::place[@type]</String>
+														<String>ancestor-or-self::place[not(note)]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -762,7 +762,7 @@
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::place[@type and position()=last()]</String>
+																<String>ancestor-or-self::place/placeName[position()=last()]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
