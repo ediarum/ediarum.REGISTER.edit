@@ -14,6 +14,9 @@ TELOTA - The electronic Life of the Academy
 
 CHANGELOG
 ------------------------------------------------------------------------------------------------
+1.0.2 vom 06.02.2020
+
+* BUGFIX 11738: Aktion zur Erstellung von Unterorten fehlerhaft
 
 1.0.1 vom 06.05.2019
 
