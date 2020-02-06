@@ -728,6 +728,30 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
+														<String>ancestor-or-self::place[not(note)] and ancestor-or-self::place[@type]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;note xmlns="http://www.tei-c.org/ns/1.0" >&lt;/note></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::place[@type]/placeName[position()=last()]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
 														<String>ancestor-or-self::place[not(note)]</String>
 													</field>
 													<field name="argValues">
@@ -1249,21 +1273,51 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::place[not(parent::place) and not(listPlace)]</String>
+														<String>ancestor-or-self::place[@type] and ancestor-or-self::place[listPlace]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>
+  &lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ( 'others':'Nicht spezifiziert'; 'building':'Gebäude';'  street':'Straße'; 'sea':'Fluss, See';  'mountain':'Berg, Hügel, Felsen';  'forrest':'Wald';   'park':'Parks';  ))}">
+          &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
+  &lt;/place>
+
+
+</String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::place[@type]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::place[not(parent::place) and not(listPlace)]  </String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';'others':'Sonstiges';))}">
+  &lt;place xml:id="ediarum_${id}" type="${ask('Art des Unterorts', combobox,  ( 'others':'Nicht spezifiziert'; 'building':'Gebäude';'  street':'Straße'; 'sea':'Fluss, See';  'mountain':'Berg, Hügel, Felsen';  'forrest':'Wald';   'park':'Parks';  ))}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place>
 &lt;/listPlace></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::place[not(parent::place)]</String>
+																<String>ancestor-or-self::place[not(@type)]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -1277,14 +1331,13 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::place[listPlace]</String>
+														<String>ancestor-or-self::place[not(parent::place) and (listPlace)]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>
-  &lt;place xml:id="ediarum_${id}" type="${ask('', radio, ('building':'Gebäude';'street':'Straße';'others':'Sonstiges';))}">
+																<String> &lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ( 'others':'Nicht spezifiziert'; 'building':'Gebäude';'  street':'Straße'; 'sea':'Fluss, See';  'mountain':'Berg, Hügel, Felsen';  'forrest':'Wald';   'park':'Parks';  ))}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place></String>
 															</entry>
@@ -4424,7 +4477,7 @@ org_location[to]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
-																<String>Inside as last child</String>
+																<String>After</String>
 															</entry>
 															<entry>
 																<String>schemaAware</String>
@@ -4456,7 +4509,7 @@ org_location[to]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
-																<String>Inside as last child</String>
+																<String>After</String>
 															</entry>
 															<entry>
 																<String>schemaAware</String>
