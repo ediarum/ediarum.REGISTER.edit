@@ -55,9 +55,10 @@ label[type='alt'] {
 } 
 
 place[type] placeName[type="reg"]:after{
+    font-family: courier, fixed, monospace;
     font-style: italic;
     color: gray;
-    font-size: 80%;
+    font-size: 75%;
 }
 
 place[type="building"] placeName[type="reg"]:after{
