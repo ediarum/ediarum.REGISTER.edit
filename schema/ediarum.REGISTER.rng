@@ -410,9 +410,11 @@
                         <value>building</value>
                         <value>sea</value>
                         <value>mountain</value>
-                        <value>forrest</value>
-                        <value>parks</value>
+                        <value>forest</value>
+                        <value>park</value>
                         <value>others</value>
+                        <value>monument</value>
+                        <value>district</value>
                     </choice>
                 </attribute>
             </optional>
