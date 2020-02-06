@@ -90,6 +90,14 @@ place[type="others"] placeName[type="reg"]:after{
     content: " ([Nicht spezifiziert])";
 }
 
+place[type="district"] placeName[type="reg"]:after{
+    content: " (Stadtviertel)";
+}
+
+place[type="monument"] placeName[type="reg"]:after{
+    content: " (Denkmal)";
+}
+
 place listPlace,
 bibl bibl,
 org location,
