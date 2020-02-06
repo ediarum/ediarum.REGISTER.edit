@@ -54,6 +54,50 @@ label[type='alt'] {
     font-style: italic;
 } 
 
+place[type] placeName[type="reg"]:after{
+    font-family: courier, fixed, monospace;
+    font-style: italic;
+    color: gray;
+    font-size: 75%;
+}
+
+place[type="building"] placeName[type="reg"]:after{
+    content: " (Gebäude)";
+}
+
+place[type="street"] placeName[type="reg"]:after{
+    content: " (Straße)";
+    
+}
+
+place[type="mountain"] placeName[type="reg"]:after{
+    content: " (Berg, Hügel, Felsen)";
+}
+
+place[type="sea"] placeName[type="reg"]:after{
+    content: " (Fluss, See)";
+}
+
+place[type="parks"] placeName[type="reg"]:after{
+    content: " (Park)";
+}
+
+place[type="forrest"] placeName[type="reg"]:after{
+    content: " (Wald)";
+}
+
+place[type="others"] placeName[type="reg"]:after{
+    content: " ([Nicht spezifiziert])";
+}
+
+place[type="district"] placeName[type="reg"]:after{
+    content: " (Stadtviertel)";
+}
+
+place[type="monument"] placeName[type="reg"]:after{
+    content: " (Denkmal)";
+}
+
 place listPlace,
 bibl bibl,
 org location,
@@ -248,12 +292,13 @@ location[from][to]:before {
 /* Places */
 placeName[type="reg"] {
     font-weight: bold;
-     -oxy-placeholder-content: "Ortsname";
+     -oxy-placeholder-content: "Ortsnames";
 }
 
 placeName[type="alt"] {
      -oxy-placeholder-content: "Alternativer Ortsname";
 }
+
 
 /* Bibl */
 author, editor {
