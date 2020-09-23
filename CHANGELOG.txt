@@ -6,14 +6,23 @@ Framework (Dokumenttyp-Zuordnung) für Oxygen XML
 
 Entwicklung: 
 Stefan Dumont, dumont@bbaw.de
+Nadine Arndt, narndt@bbaw.de 
+Gordon Fischer, gfischer@bbaw.de 
 
-© 2011-2018 
+© 2011-2020
 Berlin-Brandenburgische Akademie der Wissenschaften 
 TELOTA - The electronic Life of the Academy
 
 
 CHANGELOG
 ------------------------------------------------------------------------------------------------
+1.0.3 vom 23.09.2020
+
+* Kleinere Schema-Anpassungen:
+** quote (mit hi) in Beschreibung erlauben
+** Datentyp von ref/@target ändern in xs:anyURI, damit Oxygen XML Author URLs beim Einfügen korrekt enkodiert (betrifft v.a. "&")
+** @oldID (für ediarum-Einsatz an der BBAW)
+
 1.0.2 vom 06.02.2020
 
 * BUGFIX 11738: Aktion zur Erstellung von Unterorten fehlerhaft

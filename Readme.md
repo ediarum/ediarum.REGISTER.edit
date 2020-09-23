@@ -1,6 +1,6 @@
 # ediarum.REGISTER.edit
 
-© 2011-2018 by Berlin-Brandenburg Academey of Sciences and Humanities
+© 2011-2020 by Berlin-Brandenburg Academey of Sciences and Humanities
 
 Developed by TELOTA, a DH working group of the Berlin-Brandenburg Academey of Sciences and Humanities
 http://www.bbaw.de/telota
