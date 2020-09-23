@@ -28,6 +28,9 @@
             <optional>
                 <attribute name="xml:id"/>
             </optional>
+	    <optional>
+                <attribute name="oldID"/>
+            </optional>
             <!-- header -->
             <element name="teiHeader">
                 <a:documentation>contains the metadata of the manuscript</a:documentation>
@@ -394,6 +397,19 @@
             <data type="anyURI"/>
         </element>
     </define>
+      <define name="quote">
+        <element name="quote">
+            <data type="string"/>
+        </element>
+    </define>
+     <define name="hi">
+        <element name="hi">
+	      <attribute name="rendition">
+                <text/>
+            </attribute>
+            <data type="string"/>
+        </element>
+    </define>
     <define name="place">
         <element name="place">
             <optional>
@@ -420,7 +436,13 @@
             </optional>
             <zeroOrMore>
                 <ref name="idno"/>
+	
             </zeroOrMore>
+  	     <zeroOrMore>
+                <ref name="quote"/>
+	
+            </zeroOrMore>
+
             <oneOrMore>
                 <element name="placeName">
                     <attribute name="type">
@@ -435,6 +457,7 @@
             <optional>
                 <ref name="note"/>
             </optional>
+           
             <optional>
                 <ref name="linkGrp"/>
             </optional>
@@ -500,6 +523,7 @@
                             <value>page</value>
                             <value>letter</value>
                             <value>document</value>
+			    
                         </choice>
                     </attribute>
                     <optional>
@@ -526,6 +550,7 @@
                             <value>page</value>
                             <value>letter</value>
                             <value>document</value>
+			    
                         </choice>
                     </attribute>
                     <optional>
@@ -545,7 +570,7 @@
     </define>
     <define name="ref">
         <attribute name="target">
-            <text/>
+            <data type="anyURI"/>
         </attribute>
     </define>
     <define name="bibl_persName">
@@ -590,11 +615,20 @@
         <element name="note">
             <ref name="content_note"/>
         </element>
+
     </define>
     <define name="content_note">
         <interleave>
             <zeroOrMore>
                 <text/>
+            </zeroOrMore>
+	    <zeroOrMore>
+                <element name="ref">
+		 <attribute name="target">
+                        <text/>
+                    </attribute>
+                 <text/>
+                </element>
             </zeroOrMore>
             <zeroOrMore>
                 <element name="persName">
@@ -603,6 +637,12 @@
                     </attribute>
                     <text/>
                 </element>
+            </zeroOrMore>
+	      <zeroOrMore>
+                <ref name="quote"/>
+            </zeroOrMore>
+	     <zeroOrMore>
+                <ref name="hi"/>
             </zeroOrMore>
             <zeroOrMore>
                 <element name="placeName">
