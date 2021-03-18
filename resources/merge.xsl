@@ -3,7 +3,7 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:telota="http://www.telota.de"
-    exclude-result-prefixes="xs"
+    exclude-result-prefixes="xs tei"
     version="2.0">
     
     <xsl:variable name="migratingEntry">
