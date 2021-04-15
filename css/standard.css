@@ -194,22 +194,22 @@ note ref[target]:after {
 
 desc persName[key]:after,
 note persName[key]:after {
-    link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_person}') "?id=" attr(key);
+    link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_person}') "?id=" attr(key);
 }
 
 desc orgName[key]:after, 
 note orgName[key]:after {
-    link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_org}') "?id=" attr(key);
+    link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_org}') "?id=" attr(key);
 }
 
 desc placeName[key]:after,
 note placeName[key]:after {
-    link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_place}') "?id=" attr(key);
+    link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_place}') "?id=" attr(key);
 }
 
 desc bibl[sameAs]:after,
 note bibl[sameAs]:after {
-    link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_bibl}') "?id=" attr(sameAs);
+    link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_bibl}') "?id=" attr(sameAs);
 }
 
 
