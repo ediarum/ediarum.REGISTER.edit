@@ -85,7 +85,7 @@ place[type="sea"] placeName[type="reg"]:after{
     content: " (Fluss, See)";
 }
 
-place[type="parks"] placeName[type="reg"]:after{
+place[type="park"] placeName[type="reg"]:after{
     content: " (Park)";
 }
 
