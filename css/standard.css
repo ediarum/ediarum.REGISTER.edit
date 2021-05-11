@@ -1,7 +1,14 @@
 @namespace xml "http://www.w3.org/XML/1998/namespace";
 @namespace telota "http://www.telota.de";
+@namespace oxy "http://www.oxygenxml.com/extensions/author";
 
 /* General */
+
+oxy|comment{
+    visibility:-oxy-collapse-text;
+    -oxy-display-tags: none;
+}
+
 TEI {
     padding: 1em;
     font-family: BBAWfont;
@@ -82,7 +89,7 @@ place[type="parks"] placeName[type="reg"]:after{
     content: " (Park)";
 }
 
-place[type="forrest"] placeName[type="reg"]:after{
+place[type="forest"] placeName[type="reg"]:after{
     content: " (Wald)";
 }
 
