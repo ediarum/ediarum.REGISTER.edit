@@ -82,7 +82,7 @@ place[type="parks"] placeName[type="reg"]:after{
     content: " (Park)";
 }
 
-place[type="forrest"] placeName[type="reg"]:after{
+place[type="forest"] placeName[type="reg"]:after{
     content: " (Wald)";
 }
 
