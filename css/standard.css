@@ -173,7 +173,8 @@ note ref[target],
 note persName,
 note orgName,
 note placeName,
-note bibl {
+note bibl,
+rolename {
     display: inline;
     padding: 0;
     border: 0;
@@ -235,6 +236,10 @@ person[role='mythological']:before {
     content: "[Mythologische Person]";   
 }
 
+person[role='royal']:before {
+    content: "[Adelige Person]";   
+}
+
 persName[subtype='birthname']:before {
     content: "Geburtsname: ";
     color: #666;
@@ -251,6 +256,15 @@ surname {
 
 forename {
     -oxy-placeholder-content: "Vorname(n)";
+    -oxy-show-placeholder: always;
+}
+rolename {
+	display: block;
+    -oxy-placeholder-content: "Adelstitel";
+    -oxy-show-placeholder: always;
+}
+rolename placeName {
+    -oxy-placeholder-content: "Region/Ort";
     -oxy-show-placeholder: always;
 }
 
