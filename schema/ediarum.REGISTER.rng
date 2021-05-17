@@ -717,7 +717,40 @@
                 <element name="forename">
                     <text/>
                 </element>
+            	<optional>
+            		<element name="nameLink">
+            			<text/>
+            		</element>
+            	</optional>
+            	<zeroOrMore>
+            		<ref name="content_roleName"></ref>
+            	</zeroOrMore>
             </group>
         </choice>
     </define>
+	<define name="content_roleName">
+		<element name="roleName">
+			<optional>
+				<attribute name="type">
+				<choice>
+					<value>nobility</value>
+					<value>military</value>
+					<value>office</value>
+					<value>honorific</value>
+					<value>other</value>
+					<value></value>
+				</choice>
+			</attribute></optional>
+			<group>
+				<element name="name"><text></text></element>
+				<element name="date"><text></text></element>
+				<element name="placeName">
+					<attribute name="key">
+						<text/>
+					</attribute>
+					<text/>
+				</element>
+			</group>
+		</element>
+	</define>
 </grammar>

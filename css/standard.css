@@ -236,9 +236,6 @@ person[role='mythological']:before {
     content: "[Mythologische Person]";   
 }
 
-person[role='royal']:before {
-    content: "[Adelige Person]";   
-}
 
 persName[subtype='birthname']:before {
     content: "Geburtsname: ";
@@ -258,12 +255,31 @@ forename {
     -oxy-placeholder-content: "Vorname(n)";
     -oxy-show-placeholder: always;
 }
-rolename {
+nameLink:before {
+	content: " ";
+}
+
+roleName {
 	display: block;
-    -oxy-placeholder-content: "Adelstitel";
+	font-weight: normal;
+}
+
+roleName name {
+    -oxy-placeholder-content: "Position/Rolle";
     -oxy-show-placeholder: always;
 }
-rolename placeName {
+roleName date:before {
+	content: " (";
+} 
+roleName date:after {
+	content: ") ";
+} 
+
+roleName date {
+    -oxy-placeholder-content: "Zeitraum";
+    -oxy-show-placeholder: always;
+}
+roleName placeName {
     -oxy-placeholder-content: "Region/Ort";
     -oxy-show-placeholder: always;
 }
