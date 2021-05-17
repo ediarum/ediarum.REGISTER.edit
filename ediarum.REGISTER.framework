@@ -86,7 +86,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
@@ -120,7 +120,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
@@ -154,7 +154,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
@@ -188,7 +188,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;place xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;placeName type="reg">${ask('Ortsname (ohne Zusätze)')}&lt;/placeName>
 &lt;/place></String>
 															</entry>
@@ -214,7 +214,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;place xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;placeName type="reg">${ask('Ortsname (ohne Zusätze)')}&lt;/placeName>
 &lt;/place></String>
 															</entry>
@@ -240,7 +240,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;author>&lt;persName>&lt;surname>${ask('Nachname des Autors')}&lt;/surname>&lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName>&lt;/author>
   &lt;title>${ask('Titel der Publikation')}&lt;/title>
 &lt;/bibl></String>
@@ -267,7 +267,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;author>&lt;persName>&lt;surname>${ask('Nachname des Autors')}&lt;/surname>&lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName>&lt;/author>
   &lt;title>${ask('Titel der Publikation')}&lt;/title>
 &lt;/bibl></String>
@@ -294,7 +294,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff (ohne Beschreibung')}&lt;/label>
 &lt;/item></String>
 															</entry>
@@ -320,7 +320,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff ohne Beschreibung')}&lt;/label>
 &lt;/item></String>
 															</entry>
@@ -346,7 +346,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;org xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;org xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;orgName type="reg">${ask('Name der Einrichtung (ohne Beschreibung)')}&lt;/orgName>
 &lt;/org></String>
 															</entry>
@@ -372,7 +372,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;org xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;org xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;orgName type="reg">${ask('Name der Einrichtung (ohne Beschreibung)')}&lt;/orgName>
 &lt;/org></String>
 															</entry>
@@ -980,7 +980,7 @@
 																<String>fragment</String>
 																<String>&lt;listPerson xmlns="http://www.tei-c.org/ns/1.0" type="group">
   &lt;head xmlns="http://www.tei-c.org/ns/1.0">${ask('Gruppenname')}&lt;/head>
-&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ediarum_${id}">
+&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;idno xmlns="http://www.tei-c.org/ns/1.0" type="uri">${ask('Norm-ID eingeben (GND, VIAF, BNF)')}&lt;/idno>
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname eingeben')}&lt;/surname>
@@ -1019,7 +1019,7 @@
 																<String>fragment</String>
 																<String>&lt;listPerson xmlns="http://www.tei-c.org/ns/1.0" type="group">
   &lt;head xmlns="http://www.tei-c.org/ns/1.0">${ask('Gruppenname')}&lt;/head>
-&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ediarum_${id}">
+&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;idno xmlns="http://www.tei-c.org/ns/1.0" type="uri">${ask('Norm-ID eingeben (GND, VIAF, BNF)')}&lt;/idno>
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname eingeben')}&lt;/surname>
@@ -1058,7 +1058,7 @@
 																<String>fragment</String>
 																<String>&lt;listPerson xmlns="http://www.tei-c.org/ns/1.0" type="group">
   &lt;head xmlns="http://www.tei-c.org/ns/1.0">${ask('Gruppenname')}&lt;/head>
-&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ediarum_${id}">
+&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;idno xmlns="http://www.tei-c.org/ns/1.0" type="uri">${ask('Norm-ID eingeben (GND, VIAF, BNF)')}&lt;/idno>
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname eingeben')}&lt;/surname>
@@ -1279,7 +1279,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+																<String>&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place></String>
 															</entry>
@@ -1306,7 +1306,7 @@
 															<entry>
 																<String>fragment</String>
 																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
-&lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place>
 &lt;/listPlace></String>
@@ -1333,7 +1333,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+																<String>&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place></String>
 															</entry>
@@ -3076,7 +3076,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}" role="mythological">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}" role="mythological">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;name xmlns="http://www.tei-c.org/ns/1.0">${ask('Name eingeben')}&lt;/name>
 &lt;/persName>
@@ -3108,7 +3108,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}" role="mythological">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}" role="mythological">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;name xmlns="http://www.tei-c.org/ns/1.0">${ask('Name')}&lt;/name>
 &lt;/persName>
@@ -3296,7 +3296,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art der Publikation', combobox, ('journal':'Zeitschrift';'edited_volumen':'Sammelband';), 'journal')}" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art der Publikation', combobox, ('journal':'Zeitschrift';'edited_volumen':'Sammelband';), 'journal')}" xml:id="${ediarum_id}">
   &lt;title type="reg">${ask('Titel der Zeitschrift bzw. des Sammelbandes', generic, '')}&lt;/title>  
 &lt;/bibl></String>
 															</entry>
@@ -3322,7 +3322,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art der Publikation', combobox, ('journal':'Zeitschrift';'edited_volumen':'Sammelband';), 'journal')}" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art der Publikation', combobox, ('journal':'Zeitschrift';'edited_volumen':'Sammelband';), 'journal')}" xml:id="${ediarum_id}">
   &lt;title>${ask('Titel der Zeitschrift bzw. des Sammelbandes', generic, '')}&lt;/title>  
 &lt;/bibl></String>
 															</entry>
@@ -3378,7 +3378,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:id="${ediarum_id}">
   &lt;author>
     &lt;persName>
       &lt;surname>${ask('Nachname des Autors', generic, '')}&lt;/surname>
@@ -3411,7 +3411,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:id="${ediarum_id}">
   &lt;author>
     &lt;persName>
       &lt;surname>${ask('Nachname des Autors', generic, '')}&lt;/surname>
@@ -4230,7 +4230,7 @@ org_location[to]</String>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;item xml:id="ed_${id}">
+  &lt;item xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff ohne Beschreibung')}&lt;/label>
 &lt;/item>
 &lt;/list></String>
@@ -4258,7 +4258,7 @@ org_location[to]</String>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;item xml:id="ed_${id}">
+  &lt;item xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff ohne Beschreibung')}&lt;/label>
 &lt;/item>
 &lt;/list></String>
@@ -4286,7 +4286,7 @@ org_location[to]</String>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;item xml:id="ed_${id}">
+  &lt;item xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff ohne Beschreibung')}&lt;/label>
 &lt;/item>
 &lt;/list></String>
