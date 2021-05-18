@@ -743,13 +743,14 @@
 			</attribute></optional>
 			<group>
 				<element name="name"><text></text></element>
-				<element name="date"><text></text></element>
-				<element name="placeName">
+				<optional>
+					<element name="date"><text></text></element></optional>
+				<optional><element name="placeName">
 					<attribute name="key">
 						<text/>
 					</attribute>
 					<text/>
-				</element>
+				</element></optional>
 			</group>
 		</element>
 	</define>
