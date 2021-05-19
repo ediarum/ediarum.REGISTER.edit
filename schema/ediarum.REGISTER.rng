@@ -742,15 +742,12 @@
 				</choice>
 			</attribute></optional>
 			<group>
-				<element name="name"><text></text></element>
+				<element name="name"><text/>
+					<optional><element name="placeName"><text/></element>
+					</optional>
+				</element>
 				<optional>
-					<element name="date"><text></text></element></optional>
-				<optional><element name="placeName">
-					<attribute name="key">
-						<text/>
-					</attribute>
-					<text/>
-				</element></optional>
+					<element name="date"><text/></element></optional>
 			</group>
 		</element>
 	</define>
