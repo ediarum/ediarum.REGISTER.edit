@@ -5116,6 +5116,52 @@ person_persName[roleName]_placeName</String>
 											<String>person_persName[roleName]_placeName</String>
 										</field>
 										<field name="name">
+											<String>Geographische Zuordnung der Rolle</String>
+										</field>
+										<field name="description">
+											<String>Geographische Zuordnung der Rolle oder Position markieren (z.B. Hoheitsgebiet, Region, Ort).</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::roleName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;placeName xmlns="http://www.tei-c.org/ns/1.0">&lt;/placeName></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>person_persName[roleName]_placeName - Kopie</String>
+										</field>
+										<field name="name">
 											<String>Hocheitsgebiet/Region</String>
 										</field>
 										<field name="description">
@@ -5455,6 +5501,11 @@ person_persName[roleName]_placeName</String>
 														<toolbarSeparator/>
 														<toolbarItem>
 															<field name="actionID">
+																<String>person_persName[nameLink]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
 																<String>person_persName[birth]_name - Kopie</String>
 															</field>
 														</toolbarItem>
@@ -5498,12 +5549,12 @@ person_persName[roleName]_placeName</String>
 														<toolbarSeparator/>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person_persName[roleName]</String>
+																<String>person_persName[roleName]_name</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person_persName[nameLink]</String>
+																<String>person_persName[roleName]_placeName</String>
 															</field>
 														</toolbarItem>
 														<toolbarSeparator/>
