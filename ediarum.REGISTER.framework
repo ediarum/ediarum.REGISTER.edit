@@ -90,6 +90,7 @@
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr')}&lt;/death>
   &lt;/person></String>
@@ -124,6 +125,7 @@
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr')}&lt;/death>
   &lt;/person></String>
@@ -158,6 +160,7 @@
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr eingeben')}&lt;/death>
 &lt;/person></String>
