@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="21.1" xml:space="preserve">
+<serialized version="20.1" xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
@@ -114,7 +114,7 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::*:listPerson[@type="group"]/tei:head</String>
+														<String>ancestor-or-self::*:listPerson[@type="group"]/head</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
