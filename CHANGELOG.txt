@@ -8,14 +8,22 @@ Entwicklung:
 Stefan Dumont, dumont@bbaw.de
 Nadine Arndt, narndt@bbaw.de 
 Gordon Fischer, gfischer@bbaw.de 
+Lou Klappenbach, klappenbach@bbaw.de
 
-© 2011-2020
+© 2011-2021
 Berlin-Brandenburgische Akademie der Wissenschaften 
-TELOTA - The electronic Life of the Academy
+TELOTA - Digital Humanities
 
 
 CHANGELOG
 ------------------------------------------------------------------------------------------------
+2.0.0 vom XX.12.2021
+
+* BREAKING FEATURE: Neue Variable ${ediarum_id} für IDs, benötigt ediarum.DB 4.1!
+* FEATURE: Adelsprädikate 
+* FEATURE: Personengruppen
+* Verschiedene Bugfixes 
+
 1.0.3 vom 23.09.2020
 
 * Kleinere Schema-Anpassungen:
