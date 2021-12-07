@@ -173,7 +173,8 @@ note ref[target],
 note persName,
 note orgName,
 note placeName,
-note bibl {
+note bibl,
+rolename {
     display: inline;
     padding: 0;
     border: 0;
@@ -235,6 +236,7 @@ person[role='mythological']:before {
     content: "[Mythologische Person]";   
 }
 
+
 persName[subtype='birthname']:before {
     content: "Geburtsname: ";
     color: #666;
@@ -251,6 +253,34 @@ surname {
 
 forename {
     -oxy-placeholder-content: "Vorname(n)";
+    -oxy-show-placeholder: always;
+}
+nameLink:before {
+	content: " ";
+}
+
+roleName {
+	display: block;
+	font-weight: normal;
+}
+
+roleName name {
+    -oxy-placeholder-content: "Position/Rolle";
+    -oxy-show-placeholder: always;
+}
+roleName date:before {
+	content: " (";
+} 
+roleName date:after {
+	content: ") ";
+} 
+
+roleName date {
+    -oxy-placeholder-content: "Zeitraum";
+    -oxy-show-placeholder: always;
+}
+roleName placeName {
+    -oxy-placeholder-content: "Region/Ort";
     -oxy-show-placeholder: always;
 }
 

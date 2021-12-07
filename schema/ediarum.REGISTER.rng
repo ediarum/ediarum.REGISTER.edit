@@ -327,9 +327,9 @@
                 </attribute>
             </optional>
             <ref name="xmlid"/>
-            <optional>
+            <zeroOrMore>
                 <ref name="idno"/>
-            </optional>
+            </zeroOrMore>
             <element name="persName">
                 <attribute name="type">
                     <value>reg</value>
@@ -717,7 +717,38 @@
                 <element name="forename">
                     <text/>
                 </element>
+            	<optional>
+            		<element name="nameLink">
+            			<text/>
+            		</element>
+            	</optional>
+            	<zeroOrMore>
+            		<ref name="content_roleName"></ref>
+            	</zeroOrMore>
             </group>
         </choice>
     </define>
+	<define name="content_roleName">
+		<element name="roleName">
+			<optional>
+				<attribute name="type">
+				<choice>
+					<value>nobility</value>
+					<value>military</value>
+					<value>office</value>
+					<value>honorific</value>
+					<value>other</value>
+					<value></value>
+				</choice>
+			</attribute></optional>
+			<group>
+				<element name="name"><text/>
+					<optional><element name="placeName"><text/></element>
+					</optional>
+				</element>
+				<optional>
+					<element name="date"><text/></element></optional>
+			</group>
+		</element>
+	</define>
 </grammar>

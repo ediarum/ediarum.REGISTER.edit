@@ -90,6 +90,7 @@
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr')}&lt;/death>
   &lt;/person></String>
@@ -124,6 +125,7 @@
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr')}&lt;/death>
   &lt;/person></String>
@@ -158,6 +160,7 @@
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr eingeben')}&lt;/death>
 &lt;/person></String>
@@ -1777,7 +1780,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>person_persName[alt]_surname - Kopie</String>
+											<String>person_persName[alt]_surname</String>
 										</field>
 										<field name="name">
 											<String>Alternativer Name bzw. Schreibung (Vor- und Nachname)</String>
@@ -2906,7 +2909,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>person_persName[birth]_name - Kopie</String>
+											<String>person_persName[birth]_name</String>
 										</field>
 										<field name="name">
 											<String>Geburtsname</String>
@@ -2962,7 +2965,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>person_persName[pseudonym]_name - Kopie</String>
+											<String>person_persName[pseudonym]_surnameforename</String>
 										</field>
 										<field name="name">
 											<String>Pseudonym (Vor- und Nachname)</String>
@@ -4948,6 +4951,168 @@ general_ptr_2</String>
 											<Boolean>true</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>person_persName[nameLink]</String>
+										</field>
+										<field name="name">
+											<String>Adelsprädikat</String>
+										</field>
+										<field name="description">
+											<String>Adelsprädikat eingeben</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::persName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0" >${ask('Adelsprädikat eingeben')}
+&lt;/nameLink></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::persName/child::forename</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>person_persName[roleName]_name</String>
+										</field>
+										<field name="name">
+											<String>Position, Rolle</String>
+										</field>
+										<field name="description">
+											<String>Gesellschaftliche Position, Rolle hinzufügen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::persName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;roleName xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Rollentyp', combobox, ('nobility':'Adelstitel';'office':'Politisches/Administratives Amt';'military':'Militärrang';'honorific':'Ehrentitel';'other':'Sonstiges';), '')}">
+&lt;name  xmlns="http://www.tei-c.org/ns/1.0" >${ask('Rolle/Position/Titel eingeben')}&lt;/name>
+&lt;date xmlns="http://www.tei-c.org/ns/1.0" >${ask('Zeitraum eingeben')}&lt;/date>
+&lt;/roleName></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::persName</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>person_persName[roleName]_placeName</String>
+										</field>
+										<field name="name">
+											<String>Geographische Zuordnung der Rolle</String>
+										</field>
+										<field name="description">
+											<String>Geographische Zuordnung der Rolle oder Position markieren (z.B. Hoheitsgebiet, Region, Ort).</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::roleName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;placeName xmlns="http://www.tei-c.org/ns/1.0">&lt;/placeName></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -5206,7 +5371,12 @@ general_ptr_2</String>
 														<toolbarSeparator/>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person_persName[birth]_name - Kopie</String>
+																<String>person_persName[nameLink]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_persName[birth]_name</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
@@ -5216,12 +5386,12 @@ general_ptr_2</String>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person_persName[pseudonym]_name - Kopie</String>
+																<String>person_persName[pseudonym]_surnameforename</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person_persName[alt]_surname - Kopie</String>
+																<String>person_persName[alt]_surname</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
@@ -5244,6 +5414,17 @@ general_ptr_2</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>person_role</String>
+															</field>
+														</toolbarItem>
+														<toolbarSeparator/>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_persName[roleName]_name</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_persName[roleName]_placeName</String>
 															</field>
 														</toolbarItem>
 														<toolbarSeparator/>
