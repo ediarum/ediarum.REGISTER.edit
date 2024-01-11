@@ -353,6 +353,50 @@
                 </element>
             </zeroOrMore>
             <optional>
+                <element name="gender">
+                    <attribute name="value">
+                        <choice>
+                            <value>unknown</value>
+                            <value>woman</value>
+                            <value>man</value>
+                            <value>diverse</value>
+                            <value>fluid</value>
+                            <value>nonBinary</value>
+                            <value>notSpecified</value>
+                            <value>transWoman</value>
+                            <value>transMan</value>
+                        </choice>
+                    </attribute>
+                    <attribute name="evidence">
+                        <choice>
+                            <value>assigned</value>
+                            <value>selfIdentification</value>
+                        </choice>
+                    </attribute>
+                </element>
+            </optional>
+            <optional>
+                <element name="sex">
+                    <attribute name="value">
+                        <choice>
+                            <value>unknown</value>
+                            <value>female</value>
+                            <value>male</value>
+                            <value>intersex</value>
+                            <value>notSpecified</value>
+                            <value>transFemale</value>
+                            <value>transMale</value>
+                        </choice>
+                    </attribute>
+                    <attribute name="evidence">
+                        <choice>
+                            <value>assigned</value>
+                            <value>selfIdentification</value>
+                        </choice>
+                    </attribute>
+                </element>
+            </optional>
+            <optional>
                 <choice>
                     <group>
                         <element name="birth">

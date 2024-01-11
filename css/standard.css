@@ -442,3 +442,85 @@ person[telota|merge]{
 idno[type='mega'] {
     display: none;
 }
+
+gender, sex {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+gender::before {
+    content: "Gender: "
+}
+
+gender[value='unknown'] {
+    content: "Unbekannt";
+}
+
+gender[value='woman'] {
+    content: "Frau";
+}
+
+gender[value='man'] {
+    content: "Mann";
+}
+
+gender[value='diverse'] {
+    content: "Divers";
+}
+
+gender[value='fluid'] {
+    content: "Genderfluid";
+}
+
+gender[value='nonBinary'] {
+    content: "Nichtbinär";
+}
+
+gender[value='notSpecified'] {
+    content: "Nicht spezifiziert";
+}
+
+gender[value='transWoman'] {
+    content: "Transfrau";
+}
+
+gender[value='transMan'] {
+    content: "Transman";
+}
+
+gender[evidence='selfIdentification']::after, sex[evidence='selfIdentification']::after {
+    content: " (Selbstidentifizierung)"
+}
+
+sex::before {
+    content: "(biologisches) Geschlecht: "
+}
+
+sex[value='unknown'] {
+    content: "Unbekannt";
+}
+
+sex[value='female'] {
+    content: "Weiblich";
+}
+
+sex[value='male'] {
+    content: "Männlich";
+}
+
+sex[value='intersex'] {
+    content: "Intersexuell";
+}
+
+sex[value='notSpecified'] {
+    content: "Nicht spezifiziert";
+}
+
+sex[value='transFemale'] {
+    content: "Transfrau";
+}
+
+sex[value='transMale'] {
+    content: "Transman";
+}
