@@ -5182,7 +5182,7 @@ general_ptr_2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;gender xmlns="http://www.tei-c.org/ns/1.0"  value="${ask('Gender', combobox, ('unknown':'Unbekannt'; 'woman':'Frau'; 'man':'Mann'; 'diverse':'Divers'; 'fluid':'Genderfluid'; 'nonBinary':'Nichtbinär';  'notSpecified':'Nicht spezifiziert'; 'transWoman':'Transfrau'; 'transMan':'Transman' ;) ,'unknown')}" evidence="${ask('Nachweis', combobox, ('assigned':'zugewiesen';'selfIdentification':'Selbstidentifizierung' ;) ,'assigned')}"/></String>
+																<String>&lt;gender xmlns="http://www.tei-c.org/ns/1.0"  value="${ask('Gender', combobox, ('unknown':'Unbekannt'; 'woman':'Frau'; 'man':'Mann'; 'diverse':'Divers'; 'fluid':'Genderfluid'; 'nonBinary':'Nichtbinär';  'notSpecified':'Nicht spezifiziert'; 'transWoman':'Transfrau'; 'transMan':'Transmann' ;) ,'unknown')}" evidence="${ask('Nachweis', combobox, ('assigned':'zugewiesen';'selfIdentification':'Selbstidentifizierung' ;) ,'assigned')}"/></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -5240,7 +5240,7 @@ general_ptr_2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;sex xmlns="http://www.tei-c.org/ns/1.0"  value="${ask('Geschlecht angeben', combobox, ('unknown':'Unbekannt'; 'female':'Frau'; 'male':'Mann'; 'intersex':'Intersexuell'; 'notSpecified':'Nicht spezifiziert'; 'transFemale':'Transfrau'; 'transMale':'Transman' ;) ,'unknown')}" evidence="${ask('Nachweis', combobox, ('assigned':'zugewiesen';'selfIdentification':'Selbstidentifizierung' ;) ,'assigned')}"/></String>
+																<String>&lt;sex xmlns="http://www.tei-c.org/ns/1.0"  value="${ask('Geschlecht angeben', combobox, ('unknown':'Unbekannt'; 'female':'Frau'; 'male':'Mann'; 'intersex':'Intersexuell'; 'notSpecified':'Nicht spezifiziert'; 'transFemale':'Transfrau'; 'transMale':'Transmann' ;) ,'unknown')}" evidence="${ask('Nachweis', combobox, ('assigned':'zugewiesen';'selfIdentification':'Selbstidentifizierung' ;) ,'assigned')}"/></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -5271,16 +5271,385 @@ general_ptr_2</String>
 							<field name="menubarDescriptor">
 								<menu>
 									<field name="label">
-										<String>Menü</String>
+										<String>ediarum</String>
 									</field>
 									<field name="accessKey">
-										<null/>
+										<String></String>
 									</field>
 									<field name="iconPath">
-										<null/>
+										<String></String>
 									</field>
 									<field name="menuEntriesDescriptorList">
-										<menuEntry-array/>
+										<menuEntry-array>
+											<menu>
+												<field name="label">
+													<String>Allgemein</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>general_authorityID</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_note</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>general_sort</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>general_persName</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_placeName</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_orgName</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_bibl_zotero</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>ref[URL]</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>general_ptr</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Personenregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>person_new[mythological]</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_gender</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_sex</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[nameLink]</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[birth]_name</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[pseudonym]_name</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[pseudonym]_surnameforename</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[alt]_surname</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[alt]_name</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_birth-death</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_floruit</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_role</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[roleName]_name</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[roleName]_placeName</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>newGroup</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>groupName</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>group_connecting</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Ortsregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>place_name_alt</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>place_listPlace</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_sort_Unterorte</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>place_getGeoname</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Werkregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_new[journal]</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_new[article]</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_title_alt</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_author</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_editor</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_persName[key]</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_author2editor</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_author_role</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_pubPlace</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_date</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Sachregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>item_label[alt]</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>item_list</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Einrichtungsregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>org_location</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>org_location[date]</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Zusammenführen</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>merge_entries[define]</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>merge_entries</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+										</menuEntry-array>
 									</field>
 									<field name="context">
 										<null/>
