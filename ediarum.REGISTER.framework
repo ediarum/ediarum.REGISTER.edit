@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="20.1" xml:space="preserve">
+<serialized xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="webResources">
+						<null/>
+					</field>
 					<field name="extensionPatch">
 						<null/>
 					</field>
@@ -5237,7 +5240,7 @@ general_ptr_2</String>
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;sex xmlns="http://www.tei-c.org/ns/1.0"  value="${ask('Geschlecht angeben', combobox, ('unknown':'Unbekannt'; 'female':'Frau'; 'male':'Mann'; 'intersex':'Intersexuell''; 'notSpecified':'Nicht spezifiziert'; 'transFemale':'Transfrau'; 'transMale':'Transman' ;) ,'unknown')}" evidence="${ask('Nachweis', combobox, ('attributed':'zugewiesen';'selfIdentification':'Selbstidentifizierung' ;) ,'attributed')}"/></String>
+																<String>&lt;sex xmlns="http://www.tei-c.org/ns/1.0"  value="${ask('Geschlecht angeben', combobox, ('unknown':'Unbekannt'; 'female':'Frau'; 'male':'Mann'; 'intersex':'Intersexuell'; 'notSpecified':'Nicht spezifiziert'; 'transFemale':'Transfrau'; 'transMale':'Transman' ;) ,'unknown')}" evidence="${ask('Nachweis', combobox, ('assigned':'zugewiesen';'selfIdentification':'Selbstidentifizierung' ;) ,'assigned')}"/></String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
@@ -5929,6 +5932,9 @@ general_ptr_2</String>
 														<String>${framework}/schema/ediarum.REGISTER.rng</String>
 													</field>
 												</validationUnitSchema>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
 											</field>
 										</validationUnit>
 									</list>
