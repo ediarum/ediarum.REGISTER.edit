@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<serialized version="21.1" xml:space="preserve">
+<serialized xml:space="preserve">
 	<serializableOrderedMap>
 		<entry>
 			<String>document.types</String>
 			<documentTypeDescriptor-array>
 				<documentTypeDescriptor>
+					<field name="webResources">
+						<null/>
+					</field>
 					<field name="extensionPatch">
 						<null/>
 					</field>
@@ -86,10 +89,11 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr')}&lt;/death>
   &lt;/person></String>
@@ -114,7 +118,7 @@
 												</actionMode>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::*:listPerson[@type="group"]</String>
+														<String>ancestor-or-self::*:listPerson[@type="group"]/head</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -124,6 +128,41 @@
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;/persName>
+&lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr')}&lt;/death>
+  &lt;/person></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::*:listPerson[@type="group"]</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>true</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::*:listPerson[@type="group"]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
+&lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
+&lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
+&lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr')}&lt;/death>
   &lt;/person></String>
@@ -154,10 +193,11 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname')}&lt;/surname>
 &lt;forename xmlns="http://www.tei-c.org/ns/1.0">${ask('Vorname(n)')}&lt;/forename>
+&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0">${ask('Adelsprädikat (optional)')}&lt;/nameLink>
 &lt;/persName>
 &lt;birth xmlns="http://www.tei-c.org/ns/1.0">${ask('Geburtsjahr')}&lt;/birth>&lt;death xmlns="http://www.tei-c.org/ns/1.0">${ask('Todesjahr eingeben')}&lt;/death>
 &lt;/person></String>
@@ -188,7 +228,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;place xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;placeName type="reg">${ask('Ortsname (ohne Zusätze)')}&lt;/placeName>
 &lt;/place></String>
 															</entry>
@@ -214,7 +254,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;place xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;placeName type="reg">${ask('Ortsname (ohne Zusätze)')}&lt;/placeName>
 &lt;/place></String>
 															</entry>
@@ -240,7 +280,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;author>&lt;persName>&lt;surname>${ask('Nachname des Autors')}&lt;/surname>&lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName>&lt;/author>
   &lt;title>${ask('Titel der Publikation')}&lt;/title>
 &lt;/bibl></String>
@@ -267,7 +307,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;author>&lt;persName>&lt;surname>${ask('Nachname des Autors')}&lt;/surname>&lt;forename>${ask('Vorname')}&lt;/forename>&lt;/persName>&lt;/author>
   &lt;title>${ask('Titel der Publikation')}&lt;/title>
 &lt;/bibl></String>
@@ -294,7 +334,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff (ohne Beschreibung')}&lt;/label>
 &lt;/item></String>
 															</entry>
@@ -320,7 +360,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;item xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff ohne Beschreibung')}&lt;/label>
 &lt;/item></String>
 															</entry>
@@ -346,7 +386,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;org xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;org xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;orgName type="reg">${ask('Name der Einrichtung (ohne Beschreibung)')}&lt;/orgName>
 &lt;/org></String>
 															</entry>
@@ -372,7 +412,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;org xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}">
+																<String>&lt;org xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
   &lt;orgName type="reg">${ask('Name der Einrichtung (ohne Beschreibung)')}&lt;/orgName>
 &lt;/org></String>
 															</entry>
@@ -980,7 +1020,7 @@
 																<String>fragment</String>
 																<String>&lt;listPerson xmlns="http://www.tei-c.org/ns/1.0" type="group">
   &lt;head xmlns="http://www.tei-c.org/ns/1.0">${ask('Gruppenname')}&lt;/head>
-&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ediarum_${id}">
+&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;idno xmlns="http://www.tei-c.org/ns/1.0" type="uri">${ask('Norm-ID eingeben (GND, VIAF, BNF)')}&lt;/idno>
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname eingeben')}&lt;/surname>
@@ -1019,7 +1059,7 @@
 																<String>fragment</String>
 																<String>&lt;listPerson xmlns="http://www.tei-c.org/ns/1.0" type="group">
   &lt;head xmlns="http://www.tei-c.org/ns/1.0">${ask('Gruppenname')}&lt;/head>
-&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ediarum_${id}">
+&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;idno xmlns="http://www.tei-c.org/ns/1.0" type="uri">${ask('Norm-ID eingeben (GND, VIAF, BNF)')}&lt;/idno>
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname eingeben')}&lt;/surname>
@@ -1058,7 +1098,7 @@
 																<String>fragment</String>
 																<String>&lt;listPerson xmlns="http://www.tei-c.org/ns/1.0" type="group">
   &lt;head xmlns="http://www.tei-c.org/ns/1.0">${ask('Gruppenname')}&lt;/head>
-&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ediarum_${id}">
+&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}">
 &lt;idno xmlns="http://www.tei-c.org/ns/1.0" type="uri">${ask('Norm-ID eingeben (GND, VIAF, BNF)')}&lt;/idno>
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;surname xmlns="http://www.tei-c.org/ns/1.0">${ask('Nachname eingeben')}&lt;/surname>
@@ -1279,7 +1319,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+																<String>&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place></String>
 															</entry>
@@ -1306,7 +1346,7 @@
 															<entry>
 																<String>fragment</String>
 																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
-&lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place>
 &lt;/listPlace></String>
@@ -1333,7 +1373,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xml:id="ediarum_${id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+																<String>&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place></String>
 															</entry>
@@ -1777,7 +1817,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>person_persName[alt]_surname - Kopie</String>
+											<String>person_persName[alt]_surname</String>
 										</field>
 										<field name="name">
 											<String>Alternativer Name bzw. Schreibung (Vor- und Nachname)</String>
@@ -2906,7 +2946,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>person_persName[birth]_name - Kopie</String>
+											<String>person_persName[birth]_name</String>
 										</field>
 										<field name="name">
 											<String>Geburtsname</String>
@@ -2962,7 +3002,7 @@
 									</action>
 									<action>
 										<field name="id">
-											<String>person_persName[pseudonym]_name - Kopie</String>
+											<String>person_persName[pseudonym]_surnameforename</String>
 										</field>
 										<field name="name">
 											<String>Pseudonym (Vor- und Nachname)</String>
@@ -3076,7 +3116,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}" role="mythological">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}" role="mythological">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;name xmlns="http://www.tei-c.org/ns/1.0">${ask('Name eingeben')}&lt;/name>
 &lt;/persName>
@@ -3108,7 +3148,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="ed_${id}" role="mythological">
+																<String>&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="${ediarum_id}" role="mythological">
 &lt;persName xmlns="http://www.tei-c.org/ns/1.0" type="reg">
 &lt;name xmlns="http://www.tei-c.org/ns/1.0">${ask('Name')}&lt;/name>
 &lt;/persName>
@@ -3296,7 +3336,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art der Publikation', combobox, ('journal':'Zeitschrift';'edited_volumen':'Sammelband';), 'journal')}" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art der Publikation', combobox, ('journal':'Zeitschrift';'edited_volumen':'Sammelband';), 'journal')}" xml:id="${ediarum_id}">
   &lt;title type="reg">${ask('Titel der Zeitschrift bzw. des Sammelbandes', generic, '')}&lt;/title>  
 &lt;/bibl></String>
 															</entry>
@@ -3322,7 +3362,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art der Publikation', combobox, ('journal':'Zeitschrift';'edited_volumen':'Sammelband';), 'journal')}" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art der Publikation', combobox, ('journal':'Zeitschrift';'edited_volumen':'Sammelband';), 'journal')}" xml:id="${ediarum_id}">
   &lt;title>${ask('Titel der Zeitschrift bzw. des Sammelbandes', generic, '')}&lt;/title>  
 &lt;/bibl></String>
 															</entry>
@@ -3378,7 +3418,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:id="${ediarum_id}">
   &lt;author>
     &lt;persName>
       &lt;surname>${ask('Nachname des Autors', generic, '')}&lt;/surname>
@@ -3411,7 +3451,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:id="ed_${id}">
+																<String>&lt;bibl xmlns="http://www.tei-c.org/ns/1.0" type="article" xml:id="${ediarum_id}">
   &lt;author>
     &lt;persName>
       &lt;surname>${ask('Nachname des Autors', generic, '')}&lt;/surname>
@@ -4230,7 +4270,7 @@ org_location[to]</String>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;item xml:id="ed_${id}">
+  &lt;item xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff ohne Beschreibung')}&lt;/label>
 &lt;/item>
 &lt;/list></String>
@@ -4258,7 +4298,7 @@ org_location[to]</String>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;item xml:id="ed_${id}">
+  &lt;item xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff ohne Beschreibung')}&lt;/label>
 &lt;/item>
 &lt;/list></String>
@@ -4286,7 +4326,7 @@ org_location[to]</String>
 															<entry>
 																<String>fragment</String>
 																<String>&lt;list xmlns="http://www.tei-c.org/ns/1.0">
-  &lt;item xml:id="ed_${id}">
+  &lt;item xml:id="${ediarum_id}">
   &lt;label type="reg">${ask('Begriff ohne Beschreibung')}&lt;/label>
 &lt;/item>
 &lt;/list></String>
@@ -4948,21 +4988,668 @@ general_ptr_2</String>
 											<Boolean>true</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>person_persName[nameLink]</String>
+										</field>
+										<field name="name">
+											<String>Adelsprädikat</String>
+										</field>
+										<field name="description">
+											<String>Adelsprädikat eingeben</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::persName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;nameLink xmlns="http://www.tei-c.org/ns/1.0" >${ask('Adelsprädikat eingeben')}
+&lt;/nameLink></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::persName/child::forename</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>person_persName[roleName]_name</String>
+										</field>
+										<field name="name">
+											<String>Position, Rolle</String>
+										</field>
+										<field name="description">
+											<String>Gesellschaftliche Position, Rolle hinzufügen.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::persName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;roleName xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Rollentyp', combobox, ('nobility':'Adelstitel';'office':'Politisches/Administratives Amt';'military':'Militärrang';'honorific':'Ehrentitel';'other':'Sonstiges';), '')}">
+&lt;name  xmlns="http://www.tei-c.org/ns/1.0" >${ask('Rolle/Position/Titel eingeben')}&lt;/name>
+&lt;date xmlns="http://www.tei-c.org/ns/1.0" >${ask('Zeitraum eingeben')}&lt;/date>
+&lt;/roleName></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::persName</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>Inside as last child</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>person_persName[roleName]_placeName</String>
+										</field>
+										<field name="name">
+											<String>Geographische Zuordnung der Rolle</String>
+										</field>
+										<field name="description">
+											<String>Geographische Zuordnung der Rolle oder Position markieren (z.B. Hoheitsgebiet, Region, Ort).</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::roleName</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;placeName xmlns="http://www.tei-c.org/ns/1.0">&lt;/placeName></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>person_gender</String>
+										</field>
+										<field name="name">
+											<String>Gender</String>
+										</field>
+										<field name="description">
+											<String>Informationen zum Gender eine:R Person hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::person[not(./gender)]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;gender xmlns="http://www.tei-c.org/ns/1.0"  value="${ask('Gender', combobox, ('unknown':'Unbekannt'; 'woman':'Frau'; 'man':'Mann'; 'diverse':'Divers'; 'fluid':'Genderfluid'; 'nonBinary':'Nichtbinär';  'notSpecified':'Nicht spezifiziert'; 'transWoman':'Transfrau'; 'transMan':'Transmann' ;) ,'unknown')}" evidence="${ask('Nachweis', combobox, ('assigned':'zugewiesen';'selfIdentification':'Selbstidentifizierung' ;) ,'assigned')}"/></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::person/persName</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+									<action>
+										<field name="id">
+											<String>person_sex</String>
+										</field>
+										<field name="name">
+											<String>Geschlecht (biologisch)</String>
+										</field>
+										<field name="description">
+											<String>Informationen zum (biologischen) Geschlecht eine:R Person hinzufügen</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String>ancestor-or-self::person[not(./sex)]</String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;sex xmlns="http://www.tei-c.org/ns/1.0"  value="${ask('Geschlecht angeben', combobox, ('unknown':'Unbekannt'; 'female':'Frau'; 'male':'Mann'; 'intersex':'Intersexuell'; 'notSpecified':'Nicht spezifiziert'; 'transFemale':'Transfrau'; 'transMale':'Transmann' ;) ,'unknown')}" evidence="${ask('Nachweis', combobox, ('assigned':'zugewiesen';'selfIdentification':'Selbstidentifizierung' ;) ,'assigned')}"/></String>
+															</entry>
+															<entry>
+																<String>insertLocation</String>
+																<String>ancestor-or-self::person/persName</String>
+															</entry>
+															<entry>
+																<String>insertPosition</String>
+																<String>After</String>
+															</entry>
+															<entry>
+																<String>schemaAware</String>
+																<String>false</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.InsertFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
 								<menu>
 									<field name="label">
-										<String>Menü</String>
+										<String>ediarum</String>
 									</field>
 									<field name="accessKey">
-										<null/>
+										<String></String>
 									</field>
 									<field name="iconPath">
-										<null/>
+										<String></String>
 									</field>
 									<field name="menuEntriesDescriptorList">
-										<menuEntry-array/>
+										<menuEntry-array>
+											<menu>
+												<field name="label">
+													<String>Allgemein</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>general_authorityID</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_note</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>general_sort</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>general_persName</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_placeName</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_orgName</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_bibl_zotero</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>ref[URL]</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>general_ptr</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Personenregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>person_new[mythological]</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[nameLink]</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[birth]_name</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[pseudonym]_name</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[pseudonym]_surnameforename</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[alt]_surname</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[alt]_name</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_gender</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_sex</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_birth-death</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_floruit</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_role</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[roleName]_name</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_persName[roleName]_placeName</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>newGroup</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>groupName</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>group_connecting</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Ortsregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>place_name_alt</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>place_listPlace</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>general_sort_Unterorte</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>place_getGeoname</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Werkregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_new[journal]</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_new[article]</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_title_alt</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_author</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_editor</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_persName[key]</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_author2editor</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_author_role</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_pubPlace</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>bibl_date</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Sachregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>item_label[alt]</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>item_list</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Einrichtungsregister</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>org_location</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>org_location[date]</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+											<menu>
+												<field name="label">
+													<String>Zusammenführen</String>
+												</field>
+												<field name="accessKey">
+													<String></String>
+												</field>
+												<field name="iconPath">
+													<String></String>
+												</field>
+												<field name="menuEntriesDescriptorList">
+													<menuEntry-array>
+														<menuItem>
+															<field name="actionID">
+																<String>merge_entries[define]</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>merge_entries</String>
+															</field>
+														</menuItem>
+													</menuEntry-array>
+												</field>
+												<field name="context">
+													<null/>
+												</field>
+											</menu>
+										</menuEntry-array>
 									</field>
 									<field name="context">
 										<null/>
@@ -5206,7 +5893,12 @@ general_ptr_2</String>
 														<toolbarSeparator/>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person_persName[birth]_name - Kopie</String>
+																<String>person_persName[nameLink]</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_persName[birth]_name</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
@@ -5216,17 +5908,28 @@ general_ptr_2</String>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person_persName[pseudonym]_name - Kopie</String>
+																<String>person_persName[pseudonym]_surnameforename</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
-																<String>person_persName[alt]_surname - Kopie</String>
+																<String>person_persName[alt]_surname</String>
 															</field>
 														</toolbarItem>
 														<toolbarItem>
 															<field name="actionID">
 																<String>person_persName[alt]_name</String>
+															</field>
+														</toolbarItem>
+														<toolbarSeparator/>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_gender</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_sex</String>
 															</field>
 														</toolbarItem>
 														<toolbarSeparator/>
@@ -5244,6 +5947,17 @@ general_ptr_2</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>person_role</String>
+															</field>
+														</toolbarItem>
+														<toolbarSeparator/>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_persName[roleName]_name</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_persName[roleName]_placeName</String>
 															</field>
 														</toolbarItem>
 														<toolbarSeparator/>
@@ -5598,6 +6312,9 @@ general_ptr_2</String>
 														<String>${framework}/schema/ediarum.REGISTER.rng</String>
 													</field>
 												</validationUnitSchema>
+											</field>
+											<field name="validationAdvancedSettings">
+												<null/>
 											</field>
 										</validationUnit>
 									</list>

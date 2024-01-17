@@ -1,7 +1,14 @@
 @namespace xml "http://www.w3.org/XML/1998/namespace";
 @namespace telota "http://www.telota.de";
+@namespace oxy "http://www.oxygenxml.com/extensions/author";
 
 /* General */
+
+oxy|comment{
+    visibility:-oxy-collapse-text;
+    -oxy-display-tags: none;
+}
+
 TEI {
     padding: 1em;
     font-family: BBAWfont;
@@ -78,11 +85,11 @@ place[type="sea"] placeName[type="reg"]:after{
     content: " (Fluss, See)";
 }
 
-place[type="parks"] placeName[type="reg"]:after{
+place[type="park"] placeName[type="reg"]:after{
     content: " (Park)";
 }
 
-place[type="forrest"] placeName[type="reg"]:after{
+place[type="forest"] placeName[type="reg"]:after{
     content: " (Wald)";
 }
 
@@ -166,7 +173,8 @@ note ref[target],
 note persName,
 note orgName,
 note placeName,
-note bibl {
+note bibl,
+rolename {
     display: inline;
     padding: 0;
     border: 0;
@@ -194,22 +202,22 @@ note ref[target]:after {
 
 desc persName[key]:after,
 note persName[key]:after {
-    link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_person}') "?id=" attr(key);
+    link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_person}') "?id=" attr(key);
 }
 
 desc orgName[key]:after, 
 note orgName[key]:after {
-    link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_org}') "?id=" attr(key);
+    link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_org}') "?id=" attr(key);
 }
 
 desc placeName[key]:after,
 note placeName[key]:after {
-    link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_place}') "?id=" attr(key);
+    link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_place}') "?id=" attr(key);
 }
 
 desc bibl[sameAs]:after,
 note bibl[sameAs]:after {
-    link: oxy_url('${ediarum_website_base}', '/${ediarum_project_name}${ediarum_website_bibl}') "?id=" attr(sameAs);
+    link: oxy_url('${ediarum_website_base}', '${ediarum_website_path}${ediarum_website_bibl}') "?id=" attr(sameAs);
 }
 
 
@@ -228,6 +236,7 @@ person[role='mythological']:before {
     content: "[Mythologische Person]";   
 }
 
+
 persName[subtype='birthname']:before {
     content: "Geburtsname: ";
     color: #666;
@@ -244,6 +253,34 @@ surname {
 
 forename {
     -oxy-placeholder-content: "Vorname(n)";
+    -oxy-show-placeholder: always;
+}
+nameLink:before {
+	content: " ";
+}
+
+roleName {
+	display: block;
+	font-weight: normal;
+}
+
+roleName name {
+    -oxy-placeholder-content: "Position/Rolle";
+    -oxy-show-placeholder: always;
+}
+roleName date:before {
+	content: " (";
+} 
+roleName date:after {
+	content: ") ";
+} 
+
+roleName date {
+    -oxy-placeholder-content: "Zeitraum";
+    -oxy-show-placeholder: always;
+}
+roleName placeName {
+    -oxy-placeholder-content: "Region/Ort";
     -oxy-show-placeholder: always;
 }
 
@@ -404,4 +441,86 @@ person[telota|merge]{
 /* special */
 idno[type='mega'] {
     display: none;
+}
+
+gender, sex {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+gender::before {
+    content: "Gender: "
+}
+
+gender[value='unknown'] {
+    content: "Unbekannt";
+}
+
+gender[value='woman'] {
+    content: "Frau";
+}
+
+gender[value='man'] {
+    content: "Mann";
+}
+
+gender[value='diverse'] {
+    content: "Divers";
+}
+
+gender[value='fluid'] {
+    content: "Genderfluid";
+}
+
+gender[value='nonBinary'] {
+    content: "Nichtbinär";
+}
+
+gender[value='notSpecified'] {
+    content: "Nicht spezifiziert";
+}
+
+gender[value='transWoman'] {
+    content: "Transfrau";
+}
+
+gender[value='transMan'] {
+    content: "Transman";
+}
+
+gender[evidence='selfIdentification']::after, sex[evidence='selfIdentification']::after {
+    content: " (Selbstidentifizierung)"
+}
+
+sex::before {
+    content: "(biologisches) Geschlecht: "
+}
+
+sex[value='unknown'] {
+    content: "Unbekannt";
+}
+
+sex[value='female'] {
+    content: "Weiblich";
+}
+
+sex[value='male'] {
+    content: "Männlich";
+}
+
+sex[value='intersex'] {
+    content: "Intersexuell";
+}
+
+sex[value='notSpecified'] {
+    content: "Nicht spezifiziert";
+}
+
+sex[value='transFemale'] {
+    content: "Transfrau";
+}
+
+sex[value='transMale'] {
+    content: "Transman";
 }

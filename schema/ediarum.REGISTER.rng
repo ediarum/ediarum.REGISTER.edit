@@ -110,90 +110,19 @@
     <define name="lists">
         <choice>
             <element name="listPerson">
-                <oneOrMore>
-                    <element name="person">
-                        <optional>
-                            <!-- anpassen -->
-                            <attribute name="resp">
-                                <value>gerlach</value>
-                            </attribute>
-                        </optional>
-                        <optional>
-                            <attribute name="role">
-                                <choice>
-                                    <value>fictional</value>
-                                    <value>mythological</value>
-                                </choice>
-                            </attribute>
-                        </optional>
-                        <ref name="xmlid"/>
-                        <optional>
-                            <ref name="idno"/>
-                        </optional>
-                        <element name="persName">
-                            <attribute name="type">
-                                <value>reg</value>
-                            </attribute>
-                            <ref name="content_persName"/>
-                        </element>
-                        <zeroOrMore>
-                            <element name="persName">
-                                <attribute name="type">
-                                    <value>alt</value>
-                                </attribute>
-                                <optional>
-                                    <attribute name="subtype">
-                                        <choice>
-                                          <value>birthname</value>
-                                          <value>pseudonym</value>
-                                        </choice>
-                                    </attribute>
-                                </optional>
-                                <ref name="content_persName"/>
-                            </element>
-                        </zeroOrMore>
-                        <optional>
-                            <choice>
-                                <group>
-                                    <element name="birth">
-                                        <text/>
-                                    </element>
-                                    <element name="death">
-                                        <text/>
-                                    </element>
-                                </group>
-                                <group>
-                                    <element name="floruit">
-                                        <attribute name="notBefore">
-                                            <data type="string">
-                                                <param name="pattern"
-                                                  >-?\d\d\d\d(-\d\d)?(-\d\d)?</param>
-                                            </data>
-                                        </attribute>
-                                        <attribute name="notAfter">
-                                            <data type="string">
-                                                <param name="pattern"
-                                                    >-?\d\d\d\d(-\d\d)?(-\d\d)?</param>
-                                            </data>
-                                        </attribute>
-                                        <text/>
-                                    </element>
-                                </group>
-                            </choice>
-                        </optional>
-                        <optional>
-                            <element name="occupation">
-                                <text/>
-                            </element>
-                        </optional>
-                        <optional>
-                            <ref name="note"/>
-                        </optional>
-                        <optional>
-                            <ref name="linkGrp"/>
-                        </optional>
-                    </element>
+                <interleave><oneOrMore>
+                    <ref name="person"></ref>
                 </oneOrMore>
+                <zeroOrMore>
+                    <element name="listPerson">
+                        <attribute name="type"><value>group</value></attribute>
+                        <optional>
+                            <element name="head"><text></text></element>
+                        </optional>
+                        <oneOrMore><ref name="person"></ref></oneOrMore>
+                    </element>
+                </zeroOrMore>
+                </interleave>
             </element>
             <element name="listPlace">
                 <oneOrMore>
@@ -379,6 +308,157 @@
             </element>
         </choice>
     </define>
+    
+    
+    <define name="person">
+        <element name="person">
+            <optional>
+                <!-- anpassen -->
+                <attribute name="resp">
+                    <value>gerlach</value>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="role">
+                    <choice>
+                        <value>fictional</value>
+                        <value>mythological</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="xmlid"/>
+            <zeroOrMore>
+                <ref name="idno"/>
+            </zeroOrMore>
+            <element name="persName">
+                <attribute name="type">
+                    <value>reg</value>
+                </attribute>
+                <ref name="content_persName"/>
+            </element>
+            <zeroOrMore>
+                <element name="persName">
+                    <attribute name="type">
+                        <value>alt</value>
+                    </attribute>
+                    <optional>
+                        <attribute name="subtype">
+                            <choice>
+                                <value>birthname</value>
+                                <value>pseudonym</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <ref name="content_persName"/>
+                </element>
+            </zeroOrMore>
+            <interleave>
+                <optional>
+                    <element name="gender">
+                        <attribute name="value">
+                            <choice>
+                                <value>unknown</value>
+                                <value>woman</value>
+                                <value>man</value>
+                                <value>diverse</value>
+                                <value>fluid</value>
+                                <value>nonBinary</value>
+                                <value>notSpecified</value>
+                                <value>transWoman</value>
+                                <value>transMan</value>
+                            </choice>
+                        </attribute>
+                        <attribute name="evidence">
+                            <choice>
+                                <value>assigned</value>
+                                <value>selfIdentification</value>
+                            </choice>
+                        </attribute>
+                    </element>
+                </optional>
+                <optional>
+                    <element name="sex">
+                        <attribute name="value">
+                            <choice>
+                                <value>unknown</value>
+                                <value>female</value>
+                                <value>male</value>
+                                <value>intersex</value>
+                                <value>notSpecified</value>
+                                <value>transFemale</value>
+                                <value>transMale</value>
+                            </choice>
+                        </attribute>
+                        <attribute name="evidence">
+                            <choice>
+                                <value>assigned</value>
+                                <value>selfIdentification</value>
+                            </choice>
+                        </attribute>
+                    </element>
+                </optional>
+            </interleave>
+            <optional>
+                <zeroOrMore>
+                    <element name="persName">
+                        <attribute name="type">
+                            <value>alt</value>
+                        </attribute>
+                        <optional>
+                            <attribute name="subtype">
+                                <choice>
+                                    <value>birthname</value>
+                                    <value>pseudonym</value>
+                                </choice>
+                            </attribute>
+                        </optional>
+                        <ref name="content_persName"/>
+                    </element>
+                </zeroOrMore>
+            </optional>
+            <optional>
+                <choice>
+                    <group>
+                        <element name="birth">
+                            <text/>
+                        </element>
+                        <element name="death">
+                            <text/>
+                        </element>
+                    </group>
+                    <group>
+                        <element name="floruit">
+                            <attribute name="notBefore">
+                                <data type="string">
+                                    <param name="pattern"
+                                        >-?\d\d\d\d(-\d\d)?(-\d\d)?</param>
+                                </data>
+                            </attribute>
+                            <attribute name="notAfter">
+                                <data type="string">
+                                    <param name="pattern"
+                                        >-?\d\d\d\d(-\d\d)?(-\d\d)?</param>
+                                </data>
+                            </attribute>
+                            <text/>
+                        </element>
+                    </group>
+                </choice>
+            </optional>
+            <optional>
+                <element name="occupation">
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <ref name="note"/>
+            </optional>
+            <optional>
+                <ref name="linkGrp"/>
+            </optional>
+        </element>
+    </define>
+    
     <define name="xmlid">
         <attribute name="xml:id">
             <data type="ID"/>
@@ -701,7 +781,38 @@
                 <element name="forename">
                     <text/>
                 </element>
+            	<optional>
+            		<element name="nameLink">
+            			<text/>
+            		</element>
+            	</optional>
+            	<zeroOrMore>
+            		<ref name="content_roleName"></ref>
+            	</zeroOrMore>
             </group>
         </choice>
     </define>
+	<define name="content_roleName">
+		<element name="roleName">
+			<optional>
+				<attribute name="type">
+				<choice>
+					<value>nobility</value>
+					<value>military</value>
+					<value>office</value>
+					<value>honorific</value>
+					<value>other</value>
+					<value></value>
+				</choice>
+			</attribute></optional>
+			<group>
+				<element name="name"><text/>
+					<optional><element name="placeName"><text/></element>
+					</optional>
+				</element>
+				<optional>
+					<element name="date"><text/></element></optional>
+			</group>
+		</element>
+	</define>
 </grammar>
