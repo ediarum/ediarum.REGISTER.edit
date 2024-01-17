@@ -5367,17 +5367,6 @@ general_ptr_2</String>
 														<menuSeparator/>
 														<menuItem>
 															<field name="actionID">
-																<String>person_gender</String>
-															</field>
-														</menuItem>
-														<menuItem>
-															<field name="actionID">
-																<String>person_sex</String>
-															</field>
-														</menuItem>
-														<menuSeparator/>
-														<menuItem>
-															<field name="actionID">
 																<String>person_persName[nameLink]</String>
 															</field>
 														</menuItem>
@@ -5404,6 +5393,17 @@ general_ptr_2</String>
 														<menuItem>
 															<field name="actionID">
 																<String>person_persName[alt]_name</String>
+															</field>
+														</menuItem>
+														<menuSeparator/>
+														<menuItem>
+															<field name="actionID">
+																<String>person_gender</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>person_sex</String>
 															</field>
 														</menuItem>
 														<menuSeparator/>
@@ -5919,6 +5919,17 @@ general_ptr_2</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>person_persName[alt]_name</String>
+															</field>
+														</toolbarItem>
+														<toolbarSeparator/>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_gender</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>person_sex</String>
 															</field>
 														</toolbarItem>
 														<toolbarSeparator/>
