@@ -17,12 +17,9 @@ TELOTA - Digital Humanities
 
 CHANGELOG
 ------------------------------------------------------------------------------------------------
-UNRELEASED
+2.0.0 vom 17.01.2024
 
 * FEATURE: Sex & Gender im Personenregister
-
-2.0.0 vom XX.12.2021
-
 * BREAKING FEATURE: Neue Variable ${ediarum_id} für IDs, benötigt ediarum.DB 4.1!
 * FEATURE: Adelsprädikate 
 * FEATURE: Personengruppen
