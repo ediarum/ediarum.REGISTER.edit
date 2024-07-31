@@ -5266,6 +5266,64 @@ general_ptr_2</String>
 											<Boolean>false</Boolean>
 										</field>
 									</action>
+									<action>
+										<field name="id">
+											<String>nameLink_remove</String>
+										</field>
+										<field name="name">
+											<String>Leere Adelsprädikate entfernen</String>
+										</field>
+										<field name="description">
+											<String>Entfernt leere nameLink Elemente.</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String></String>
+										</field>
+										<field name="accelerator">
+											<null/>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>caretPosition</String>
+																<String>Preserve</String>
+															</entry>
+															<entry>
+																<String>script</String>
+																<String>${framework}/resources/removeEmptyNameLink.xsl</String>
+															</entry>
+															<entry>
+																<String>sourceLocation</String>
+																<String>ancestor-or-self::body</String>
+															</entry>
+															<entry>
+																<String>targetLocation</String>
+																<String>ancestor-or-self::body</String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.XSLTOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>true</Boolean>
+										</field>
+									</action>
 								</action-array>
 							</field>
 							<field name="menubarDescriptor">
@@ -5393,6 +5451,11 @@ general_ptr_2</String>
 														<menuItem>
 															<field name="actionID">
 																<String>person_persName[alt]_name</String>
+															</field>
+														</menuItem>
+														<menuItem>
+															<field name="actionID">
+																<String>nameLink_remove</String>
 															</field>
 														</menuItem>
 														<menuSeparator/>
@@ -5919,6 +5982,11 @@ general_ptr_2</String>
 														<toolbarItem>
 															<field name="actionID">
 																<String>person_persName[alt]_name</String>
+															</field>
+														</toolbarItem>
+														<toolbarItem>
+															<field name="actionID">
+																<String>nameLink_remove</String>
 															</field>
 														</toolbarItem>
 														<toolbarSeparator/>
