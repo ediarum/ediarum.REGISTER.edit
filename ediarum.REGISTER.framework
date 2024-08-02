@@ -4993,10 +4993,10 @@ general_ptr_2</String>
 											<String>person_persName[nameLink]</String>
 										</field>
 										<field name="name">
-											<String>Adelsprädikat</String>
+											<String>Adelsprädikate</String>
 										</field>
 										<field name="description">
-											<String>Adelsprädikat eingeben</String>
+											<String>Adelsprädikate eingeben</String>
 										</field>
 										<field name="largeIconPath">
 											<String></String>
@@ -5014,7 +5014,7 @@ general_ptr_2</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::persName</String>
+														<String>ancestor-or-self::persName[not(//nameLink)]</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
