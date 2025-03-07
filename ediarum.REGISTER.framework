@@ -3986,7 +3986,7 @@
 															</entry>
 															<entry>
 																<String>item variable</String>
-																<String>&lt;location xmlns='http://www.tei-c.org/ns/1.0'  xml:id='$XPATH{@xml:id}'>
+																<String>&lt;location xmlns='http://www.tei-c.org/ns/1.0'>
   &lt;address>
     &lt;settlement key='$XPATH{@xml:id}'>$XPATH{/span}&lt;/settlement>
     &lt;note>${ask('Genauere Ortsangabe: Straße, Platz etc.', generic, '')}&lt;/note>
@@ -4043,7 +4043,7 @@
 															</entry>
 															<entry>
 																<String>item variable</String>
-																<String>&lt;location xmlns='http://www.tei-c.org/ns/1.0'  xml:id='$XPATH{@xml:id}'>
+																<String>&lt;location xmlns='http://www.tei-c.org/ns/1.0'>
   &lt;address>
     &lt;settlement key='$XPATH{@xml:id}'>$XPATH{/span}&lt;/settlement>
     &lt;note>${ask('Genauere Ortsangabe: Straße, Platz etc.', generic, '')}&lt;/note>
