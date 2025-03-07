@@ -105,6 +105,10 @@ place[type="monument"] placeName[type="reg"]:after{
     content: " (Denkmal)";
 }
 
+place[type="mine"] placeName[type="reg"]:after{
+    content: " (Bergwerk/Grube)";
+}
+
 place listPlace,
 bibl bibl,
 org location,
