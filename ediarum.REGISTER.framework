@@ -4965,7 +4965,7 @@ general_ptr_2</String>
 																<String>&lt;?xml version="1.0" encoding="UTF-8"?>
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0">
-    &lt;xsl:import href="resources/sort_unterorte.xsl"/>
+    &lt;xsl:import href="${framework}/resources/sort_unterorte.xsl"/>
 &lt;/xsl:stylesheet></String>
 															</entry>
 															<entry>
