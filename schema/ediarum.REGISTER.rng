@@ -133,9 +133,9 @@
                 <oneOrMore>
                     <element name="org">
                         <attribute name="xml:id"/>
-                        <optional>
+                        <zeroOrMore>
                             <ref name="idno"/>
-                        </optional>
+                        </zeroOrMore>
                         <element name="orgName">
                             <attribute name="type">
                                 <value>reg</value>
