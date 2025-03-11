@@ -3800,7 +3800,7 @@
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::note</String>
+														<String>ancestor-or-self::note or ancestor-or-self::desc</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
@@ -4770,7 +4770,7 @@ general_ptr_2</String>
 											<actionMode-array>
 												<actionMode>
 													<field name="xpathCondition">
-														<String>ancestor-or-self::note</String>
+														<String>ancestor-or-self::note or ancestor-or-self::desc</String>
 													</field>
 													<field name="argValues">
 														<serializableOrderedMap>
