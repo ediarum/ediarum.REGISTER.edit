@@ -1,17 +1,31 @@
 # ediarum.REGISTER.edit
 
-© 2011-2020 by Berlin-Brandenburg Academey of Sciences and Humanities
+Version: 2.0.0
 
-Developed by TELOTA, a DH working group of the Berlin-Brandenburg Academey of Sciences and Humanities
-http://www.bbaw.de/telota
-telota@bbaw.de
+© 2011-2024 by Berlin-Brandenburg Academey of Sciences and Humanities
 
-Lead Developer:
+Part of ediarum (https://www.ediarum.org, ediarum@bbaw.de)
 
-* Stefan Dumont
-* Martin Fechner
-* Sascha Grabsch
+Developed by TELOTA (https://www.bbaw.de/telota, telota@bbaw.de), a DH working group of the Berlin-Brandenburg Academey of Sciences and Humanities.
+
+Ediarum Core Team:
 * Nadine Arndt
+* Martin Fechner
+* Jan Wierzoch
+
+Developers of ediarum.REGISTER:
+
+* Nadine Arndt
+* Stefan Dumont
+* Sascha Grabsch
+* Lou Klappenbach
+* Jan Wierzoch
+
+Former Developers:
+
+* Gordon Fischer
+* Philipp Linß
+
 
 ## What does it do?
 

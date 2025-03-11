@@ -1,0 +1,36 @@
+message: "If you use this software, please cite it using these metadata."
+authors:
+    - family-names: Arndt	
+      given-names: Nadine 
+      orcid: "https://orcid.org/0000-0002-2257-7236"
+    - family-names: Dumont
+      given-names: Stefan
+      orcid: "https://orcid.org/0000-0002-6923-0950"
+    - family-names: Grabsch
+      given-names: Sascha
+      orcid: "https://orcid.org/0000-0002-7447-4589"
+    - family-names: Klappenbach
+      given-names: Lou
+      orcid: "https://orcid.org/0000-0001-6587-3353"
+    - family-names: Wierzoch
+      given-names: Jan
+      orcid: "https://orcid.org/0000-0002-6388-4064"
+  
+title: ediarum.REGISTER.edit 
+abstract: "ediarum.REGISTER.edit complements ediarum.BASE.edit and enables the editing of TEI-XML based indexes for people, places, organizations and terms in ediarum. The registers created with ediarum.REGISTER.edit can be stored in the XML database existdb and retrieved from there with the help of the existingdb app ediarum.DB and linked from the transcribed documents."
+type: software
+date-released: "2024-01-17"
+version: 2.0.0
+repository-code: "https://github.com/ediarum/ediarum.REGISTER.edit"
+license: "GPL-3.0"
+url: "https://www.ediarum.org"
+references: 
+  - authors:
+      - family-names: Fechner
+        given-names: Martin
+        orcid: "https://orcid.org/0000-0001-9233-0653"
+    title: "ediarum.JAR"
+    type: software
+    repository-code: "https://github.com/ediarum/ediarum.JAR" 
+    version: 3.1.0
+cff-version: 1.2.0
