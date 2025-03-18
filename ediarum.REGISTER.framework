@@ -5186,7 +5186,7 @@ general_ptr_2</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::person/persName</String>
+																<String>ancestor-or-self::person/persName[last()]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
@@ -5244,7 +5244,7 @@ general_ptr_2</String>
 															</entry>
 															<entry>
 																<String>insertLocation</String>
-																<String>ancestor-or-self::person/persName</String>
+																<String>ancestor-or-self::person/persName[last()]</String>
 															</entry>
 															<entry>
 																<String>insertPosition</String>
