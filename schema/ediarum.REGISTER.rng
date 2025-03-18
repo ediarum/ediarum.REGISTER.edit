@@ -160,7 +160,6 @@
                         </optional>
                         <zeroOrMore>
                             <element name="location">
-                                <ref name="xmlid"/>
                                 <optional>
                                     <group>
                                         <attribute name="from">
