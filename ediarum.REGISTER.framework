@@ -1319,7 +1319,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+																<String>&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';'mine':'Bergwerk/Grube';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place></String>
 															</entry>
@@ -1346,7 +1346,7 @@
 															<entry>
 																<String>fragment</String>
 																<String>&lt;listPlace xmlns="http://www.tei-c.org/ns/1.0">
-&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';'mine':'Bergwerk/Grube';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place>
 &lt;/listPlace></String>
@@ -1373,7 +1373,7 @@
 														<serializableOrderedMap>
 															<entry>
 																<String>fragment</String>
-																<String>&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';),'others')}">
+																<String>&lt;place xml:id="${ediarum_id}" xmlns="http://www.tei-c.org/ns/1.0" type="${ask('Art des Unterorts', combobox, ('mountain':'Berg, Hügel, Felsen';'monument':'Denkmal';'building':'Gebäude';'sea':'Fluss, See';'others':'Nicht spezifiziert';'park':'Parks';'district':'Stadtviertel';'street':'Straße';'forest':'Wald';'mine':'Bergwerk/Grube';),'others')}">
           &lt;placeName type="reg">${ask('Name eingeben')}&lt;/placeName>
   &lt;/place></String>
 															</entry>

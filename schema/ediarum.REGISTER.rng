@@ -510,6 +510,7 @@
                         <value>others</value>
                         <value>monument</value>
                         <value>district</value>
+                        <value>mine</value>
                     </choice>
                 </attribute>
             </optional>
