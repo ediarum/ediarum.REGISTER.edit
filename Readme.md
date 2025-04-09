@@ -2,7 +2,7 @@
 
 Version: 2.0.0
 
-© 2011-2024 by Berlin-Brandenburg Academey of Sciences and Humanities
+© 2011-2025 by Berlin-Brandenburg Academey of Sciences and Humanities
 
 Part of ediarum (https://www.ediarum.org, ediarum@bbaw.de)
 
@@ -51,7 +51,11 @@ components:
 
 ## Documentation
 
-tba
+See chapter "Register" in ediarum.BASE.manual [https://www.ediarum.org/docs/ediarum.BASE.manual/ediarum.REGISTER/DE/register.html](https://www.ediarum.org/docs/ediarum.BASE.manual/ediarum.REGISTER/DE/register.html) for an user manual of ediarum.REGISTER.edit. 
+
+Information for developers can be found in [https://www.ediarum.org/docs/set-up/](https://www.ediarum.org/docs/set-up/). Further information: https://www.ediarum.org.
+
+(INTERN): Workflows for feature requests and transfering project features to ediarum see: https://gitup.uni-potsdam.de/TELOTA/ediarum/ediarum-koordination/-/tree/master/6-workflow
 
 ## License
 
