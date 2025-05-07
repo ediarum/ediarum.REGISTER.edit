@@ -1,6 +1,6 @@
 # ediarum.REGISTER.edit
 
-Version: 2.0.0
+Version: 2.1.0
 
 © 2011-2025 by Berlin-Brandenburg Academey of Sciences and Humanities
 
