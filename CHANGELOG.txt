@@ -1,22 +1,15 @@
 ------------------------------------------------------------------------------------------------
 ediarum.REGISTER.edit 
-Digitale Arbeitsumgebung für Editionsvorhaben
-
-Framework (Dokumenttyp-Zuordnung) für Oxygen XML 
-
-Entwicklung: 
-Stefan Dumont, dumont@bbaw.de
-Nadine Arndt, narndt@bbaw.de 
-Gordon Fischer, gfischer@bbaw.de 
-Lou Klappenbach, klappenbach@bbaw.de
-
-© 2011-2021
-Berlin-Brandenburgische Akademie der Wissenschaften 
-TELOTA - Digital Humanities
-
 
 CHANGELOG
 ------------------------------------------------------------------------------------------------
+2.1.0 vom 07.05.2025
+
+* FEATURE #7: Leere Adelsprädikate werden gelöscht
+* BUGFIX #9: xml:id aus location im Einrichtungsregister entfernt
+* FEATURE #11: Neuer Unterort ergänzt (Bergwerk/Grube)
+* BUGFIX: XSLT-Pfade korrigiert
+
 2.0.0 vom 17.01.2024
 
 * FEATURE: Sex & Gender im Personenregister
